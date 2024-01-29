@@ -13,6 +13,32 @@ body header {
   margin: 0px;
   padding: 0px;
 }
+body header section {
+  grid-column: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: end;
+  gap: 5px;
+}
+body header section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: flex-start;
+}
+body header section div a {
+  font-weight: bold;
+  color: #e9e5e2;
+  text-decoration: none;
+}
+body header section div a:hover {
+  text-decoration: underline;
+}
+body header section div a img {
+  height: 50px;
+  width: 50px;
+}
 body header a {
   text-align: center;
   align-self: center;
