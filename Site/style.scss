@@ -72,13 +72,70 @@ body {
     }
     footer{
         position: absolute; bottom: 0;
-        height: 20%;
+        height: 30%;
         width: 100%;
         background-color: #231f20;
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr 1fr 0.20fr;
         justify-items: center;
+        #newsletter{
+            border: solid 2px #e9e5e2 ;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            grid-row: 1 /span 3;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            h4{
+                color: #e9e5e2;
+                padding: 0px 20px 0px 20px;
+                font-weight: normal;
+            }
+            input{
+                margin: 20px 5px 20px 5px;
+                border-radius: 7px;
+                background-color: #e9e5e2;
+            }
+            button{
+                margin-left: 60px;
+                margin-right: 60px;
+                border-radius: 7px;
+                background-color: #e9e5e2;
+                color: #231f20;
+            }
+        }
+        #footer-icons{
+            grid-row: 1;
+            grid-column: 2;
+            display: flex;
+            justify-self: stretch;
+            justify-content: space-evenly;
+            align-self: center;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-self: center;
+                align-self: center;
+                a{
+                    font-weight: bold;
+                    color: #e9e5e2;
+                    text-decoration: none;
+                    justify-self: center;
+                    align-self: center;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    img{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+        }
         a {
             grid-row: 2;
             grid-column: 1 /span 3;

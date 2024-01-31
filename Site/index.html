@@ -31,7 +31,40 @@
         </div>
       </section>
     </header>
+    <form onsubmit="event.preventDefault();" role="search">
+      <label for="search">Search for stuff</label>
+      <input id="search" type="search" placeholder="Search..." autofocus required />
+      <button type="submit">Go</button>    
+    </form>
     <footer>
+      <div id="newsletter">
+        <h4>Inscription à la newsletter</h4>
+        <label for="email"></label>
+        <input type="email" placeholder="Votre adresse email">
+        <button class="subscribe-btn">Soumettre</button>
+      </div>
+      <div id="footer-icons">
+        <div>
+          <a href="profil.html"><img src="icons/contact.svg" alt="user"/></a>
+          <a href="profil.html">Nous contacter</a>
+        </div>
+        <div>
+          <a href="profil.html"><img src="icons/avis.svg" alt="user"/></a>
+          <a href="profil.html">Avis clients</a>
+        </div>
+        <div>
+          <a href="profil.html"><img src="icons/faq.svg" alt="user"></a>
+          <a href="profil.html">Questions <br> fréquentes</a>
+        </div>
+        <div>
+          <a href="profil.html"><img src="icons/recipe.svg" alt="user"/></a>
+          <a href="profil.html">Nos recettes</a>
+        </div>
+        <div>
+          <a href="profil.html"><img src="icons/news.svg" alt="user"/></a>
+          <a href="profil.html">Notre actu</a>
+        </div>
+      </div>
       <a href="index.html"><img src="logo/logo_jonis.png" alt="logo" /></a>
     </footer>
   </body>
