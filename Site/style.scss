@@ -109,17 +109,20 @@ body {
             }
         }
         #footer-icons{
+            margin-top: 50px;
             grid-row: 1;
             grid-column: 2;
             display: flex;
             justify-self: stretch;
-            justify-content: space-evenly;
+            justify-content: center;
             align-self: center;
+            gap: 40px;
             div{
                 display: flex;
                 flex-direction: column;
                 justify-self: center;
                 align-self: center;
+                gap: 10px;
                 a{
                     font-weight: bold;
                     color: #e9e5e2;
@@ -130,8 +133,8 @@ body {
                         text-decoration: underline;
                     }
                     img{
-                        height: 50px;
-                        width: 50px;
+                        height: 75px;
+                        width: 75px;
                     }
                 }
             }

@@ -111,18 +111,21 @@ body footer #newsletter button {
   color: #231f20;
 }
 body footer #footer-icons {
+  margin-top: 50px;
   grid-row: 1;
   grid-column: 2;
   display: flex;
   justify-self: stretch;
-  justify-content: space-evenly;
+  justify-content: center;
   align-self: center;
+  gap: 40px;
 }
 body footer #footer-icons div {
   display: flex;
   flex-direction: column;
   justify-self: center;
   align-self: center;
+  gap: 10px;
 }
 body footer #footer-icons div a {
   font-weight: bold;
@@ -135,8 +138,8 @@ body footer #footer-icons div a:hover {
   text-decoration: underline;
 }
 body footer #footer-icons div a img {
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
 }
 body footer a {
   grid-row: 2;
