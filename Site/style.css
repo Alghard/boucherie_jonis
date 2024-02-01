@@ -71,7 +71,6 @@ body header ul li a:hover {
   text-decoration: underline;
 }
 body footer {
-  position: absolute;
   bottom: 0;
   height: 30%;
   width: 100%;
@@ -126,6 +125,9 @@ body footer #footer-icons div {
   justify-self: center;
   align-self: center;
   gap: 10px;
+}
+body footer #footer-icons div #faq {
+  margin-top: 21px;
 }
 body footer #footer-icons div a {
   font-weight: bold;
