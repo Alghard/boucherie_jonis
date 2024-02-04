@@ -4,7 +4,7 @@ body {
   font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 body header {
-  height: 15%;
+  height: 20vh;
   width: 100%;
   background-color: #231f20;
   display: grid;
@@ -47,8 +47,8 @@ body header a {
   grid-column: 2;
 }
 body header a img {
-  height: 80%;
-  width: 60%;
+  height: 15vh;
+  width: 60vh;
 }
 body header ul {
   list-style-type: none;
@@ -70,6 +70,21 @@ body header ul li a {
 body header ul li a:hover {
   text-decoration: underline;
 }
+body #search-bar {
+  width: 20vh;
+  height: 3vh;
+  margin-left: 45%;
+}
+body #search-bar.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+body #search-bar.original {
+  width: 20vh;
+  height: 3vh;
+  margin-left: 45%;
+}
 body footer {
   bottom: 0;
   height: 30%;
@@ -87,8 +102,8 @@ body footer #newsletter {
   flex-direction: column;
   grid-row: 1/span 3;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -118,6 +133,10 @@ body footer #footer-icons {
   justify-content: center;
   align-self: center;
   gap: 40px;
+}
+body footer #footer-icons .footer-icon {
+  border-right: #ae3a33 solid 2px;
+  padding-right: 30px;
 }
 body footer #footer-icons div {
   display: flex;
@@ -151,6 +170,38 @@ body footer a {
   grid-column: 2;
 }
 body footer a img {
-  height: 60%;
-  width: 40%;
+  height: 17vh;
+  width: 60vh;
+}
+body footer #bottom-txt {
+  grid-row: 3;
+  grid-column: 2;
+}
+body footer #bottom-txt p {
+  color: #e9e5e2;
+}
+body footer #bottom-txt p a {
+  color: #e9e5e2;
+  text-decoration: none;
+}
+body footer #bottom-txt p a:hover {
+  text-decoration: underline;
+}
+body footer #social-media {
+  grid-row: 1;
+  grid-column: 3;
+  display: flex;
+  gap: 5vh;
+  align-self: center;
+}
+body footer #social-media a img {
+  height: 75px;
+  width: 75px;
+}
+body footer #paiement {
+  align-self: flex-end;
+}
+body footer #paiement img {
+  height: 5vh;
+  width: 5vh;
 }/*# sourceMappingURL=style.css.map */

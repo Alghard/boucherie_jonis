@@ -3,7 +3,7 @@ body {
     margin: 0px;
     font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     header {
-        height: 15%;
+        height: 20vh;
         width: 100%;
         background-color: #231f20;
         display: grid;
@@ -44,8 +44,8 @@ body {
             align-self: center;
             grid-column: 2;
             img{
-                height: 80%;
-                width: 60%;
+                height: 15vh;
+                width: 60vh;
             }
         }
         ul{
@@ -70,6 +70,22 @@ body {
             }
         }
     }
+    #search-bar{
+        width: 20vh;
+        height: 3vh;
+        margin-left: 45%;
+    }
+    #search-bar.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    #search-bar.original{
+        width: 20vh;
+        height: 3vh;
+        margin-left: 45%;
+    }
+
     footer{
         bottom: 0;
         height: 30%;
@@ -86,8 +102,8 @@ body {
             flex-direction: column;
             grid-row: 1 /span 3;
             justify-content: center;
-            margin-top: 50px;
-            margin-bottom: 30px;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
             padding-left: 60px;
             padding-right: 60px;
             h4{
@@ -117,6 +133,10 @@ body {
             justify-content: center;
             align-self: center;
             gap: 40px;
+            .footer-icon{
+                border-right: #ae3a33 solid 2px;
+                padding-right: 30px;
+            }
             div{
                 display: flex;
                 flex-direction: column;
@@ -149,8 +169,42 @@ body {
             align-self: flex-end;
             grid-column: 2;
             img{
-                height: 60%;
-                width: 40%;
+                height: 17vh;
+                width: 60vh;
+            }
+        }
+        #bottom-txt{
+            grid-row: 3;
+            grid-column: 2;
+            p{
+                color: #e9e5e2;
+                a{
+                    color: #e9e5e2;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        #social-media{
+            grid-row: 1;
+            grid-column: 3;
+            display: flex;
+            gap: 5vh;
+            align-self: center;
+            a{
+                img{
+                    height: 75px;
+                    width: 75px;
+                }
+            }
+        }
+        #paiement{
+            align-self: flex-end;
+            img{
+                height: 5vh;
+                width: 5vh;
             }
         }
     }
