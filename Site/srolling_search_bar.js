@@ -9,14 +9,16 @@ function scrolled() {
     const searchTop = search.getBoundingClientRect().top;
 
     // Condition modifiée pour déclencher le changement de classe dès que l'en-tête disparaît de l'écran
-    if (searchTop <= 0 && !isFixed ){
-		search.classList.add("fixed");
-		search.classList.remove("original");
-		isFixed = true
-	} else if (currentScroll > 3 && isFixed){
-		search.classList.remove("fixed");
-		search.classList.add("original");
-		isFixed = false;
-	}
+    if (searchTop <= 0 && !isFixed) {
+        search.classList.add("fixed");
+        search.classList.remove("original");
+        isFixed = true;
+    } else if (currentScroll > 3 && isFixed) {
+        search.classList.add("original");
+        isFixed = false;
+    } else if (currentScroll < 3 && isFixed) {
+        search.classList.remove("fixed");
+        isFixed = true;
+    }
 }
 addEventListener("scroll", scrolled, false);
