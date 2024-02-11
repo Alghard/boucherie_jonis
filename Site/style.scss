@@ -2,6 +2,7 @@ body {
     background-color: #e9e5e2;
     margin: 0px;
     font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    position: relative;
     header {
         height: 20vh;
         width: 100%;
@@ -70,20 +71,62 @@ body {
             }
         }
     }
-    #search-bar{
-        width: 20vh;
-        height: 3vh;
-        margin-left: 45%;
-    }
-    #search-bar.fixed {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-    #search-bar.original{
-        width: 20vh;
-        height: 3vh;
-        margin-left: 45%;
+    #contain-search-bar{
+        display: flex;
+        justify-content: center;
+        #search-bar{
+            margin-top: 1vh;
+            form{
+                display: flex;
+                flex-direction: row-reverse;
+                input{
+                    background-color: #e9e5e2;
+                    border-radius: 9px;
+                    border: #c7c7c7 solid 2px;
+                    height: 3vh;
+                    width: 30vh;
+                    font-weight: bold;
+                    font-size: larger;
+                    padding-left: 1vh;
+                }
+                button{
+                    position: absolute;
+                    background: none;
+                    border: none;
+                    align-self: center;
+                    cursor: pointer;
+                }
+            }
+        }
+        #search-bar.original{
+            margin-top: 1vh;
+            form{
+                input{
+                    background-color: #e9e5e2;
+                    border-radius: 9px;
+                    border: #c7c7c7 solid 2px;
+                    height: 3vh;
+                    width: 30vh;
+                    font-weight: bold;
+                }
+            }
+        }
+        #search-bar.fixed {
+            margin-top: 1vh;
+            position: fixed;
+            top: 0;
+            opacity: 90%;
+            form{
+                input{
+                    background-color: #e9e5e2;
+                    border-radius: 9px;
+                    border: #c7c7c7 solid 2px;
+                    height: 3vh;
+                    width: 30vh;
+                    font-weight: bold;
+                }
+            }
+        }
     }
 
     footer{
