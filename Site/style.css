@@ -76,7 +76,7 @@ body #contain-search-bar {
   justify-content: center;
 }
 body #contain-search-bar #search-bar {
-  margin-top: 1vh;
+  margin-top: 2vh;
 }
 body #contain-search-bar #search-bar form {
   display: flex;
@@ -100,7 +100,7 @@ body #contain-search-bar #search-bar form button {
   cursor: pointer;
 }
 body #contain-search-bar #search-bar.original {
-  margin-top: 1vh;
+  margin-top: 2vh;
 }
 body #contain-search-bar #search-bar.original form input {
   background-color: #e9e5e2;
@@ -111,7 +111,7 @@ body #contain-search-bar #search-bar.original form input {
   font-weight: bold;
 }
 body #contain-search-bar #search-bar.fixed {
-  margin-top: 1vh;
+  margin-top: 2vh;
   position: fixed;
   top: 0;
   opacity: 90%;
@@ -123,6 +123,11 @@ body #contain-search-bar #search-bar.fixed form input {
   height: 3vh;
   width: 30vh;
   font-weight: bold;
+}
+body .container {
+  margin: 4vh 0px 4vh 0px;
+  height: 70vh;
+  border: solid 5px #ae3a33;
 }
 body footer {
   bottom: 0;

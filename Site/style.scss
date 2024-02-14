@@ -75,7 +75,7 @@ body {
         display: flex;
         justify-content: center;
         #search-bar{
-            margin-top: 1vh;
+            margin-top: 2vh;
             form{
                 display: flex;
                 flex-direction: row-reverse;
@@ -99,7 +99,7 @@ body {
             }
         }
         #search-bar.original{
-            margin-top: 1vh;
+            margin-top: 2vh;
             form{
                 input{
                     background-color: #e9e5e2;
@@ -112,7 +112,7 @@ body {
             }
         }
         #search-bar.fixed {
-            margin-top: 1vh;
+            margin-top: 2vh;
             position: fixed;
             top: 0;
             opacity: 90%;
@@ -128,7 +128,11 @@ body {
             }
         }
     }
-
+    .container{
+        margin: 4vh 0px 4vh 0px;
+        height: 70vh;
+        border: solid 5px #ae3a33;
+    }
     footer{
         bottom: 0;
         height: 30%;
