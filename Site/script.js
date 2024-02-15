@@ -1,3 +1,5 @@
+//DEBUT Script de sticky search bar
+
 const search = document.querySelector("#search-bar");
 const header = document.querySelector("header");
 let isFixed = false; // Variable pour suivre si la barre est fixe
@@ -20,4 +22,6 @@ addEventListener("scroll", () => {
     Hauteur affichage : ${innerHeight}
     Scroll Position : ${scrollY}
     isFixed : ${isFixed}`);
-})
+});
+
+//FIN Script de sticky search bar

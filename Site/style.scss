@@ -132,6 +132,15 @@ body {
         margin: 4vh 0px 4vh 0px;
         height: 70vh;
         border: solid 5px #ae3a33;
+        .container-img{
+            height: 70vh;
+            width: 90vh;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
     }
     footer{
         bottom: 0;
@@ -190,9 +199,6 @@ body {
                 justify-self: center;
                 align-self: center;
                 gap: 10px;
-                #faq{
-                    margin-top: 21px;
-                }
                 a{
                     font-weight: bold;
                     color: #e9e5e2;

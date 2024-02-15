@@ -129,6 +129,14 @@ body .container {
   height: 70vh;
   border: solid 5px #ae3a33;
 }
+body .container .container-img {
+  height: 70vh;
+  width: 90vh;
+}
+body .container .container-img img {
+  width: 100%;
+  height: 100%;
+}
 body footer {
   bottom: 0;
   height: 30%;
@@ -188,9 +196,6 @@ body footer #footer-icons div {
   justify-self: center;
   align-self: center;
   gap: 10px;
-}
-body footer #footer-icons div #faq {
-  margin-top: 21px;
 }
 body footer #footer-icons div a {
   font-weight: bold;
