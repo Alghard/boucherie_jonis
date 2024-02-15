@@ -80,6 +80,7 @@ body {
                 display: flex;
                 flex-direction: row-reverse;
                 input{
+                    transition: 0.2s;
                     background-color: #e9e5e2;
                     border-radius: 9px;
                     border: #c7c7c7 solid 2px;
@@ -102,6 +103,7 @@ body {
             margin-top: 2vh;
             form{
                 input{
+                    transition: 0.2s;
                     background-color: #e9e5e2;
                     border-radius: 9px;
                     border: #c7c7c7 solid 2px;
@@ -118,6 +120,7 @@ body {
             opacity: 90%;
             form{
                 input{
+                    transition: 0.2s;
                     background-color: #e9e5e2;
                     border-radius: 9px;
                     border: #c7c7c7 solid 2px;

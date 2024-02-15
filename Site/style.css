@@ -83,6 +83,7 @@ body #contain-search-bar #search-bar form {
   flex-direction: row-reverse;
 }
 body #contain-search-bar #search-bar form input {
+  transition: 0.2s;
   background-color: #e9e5e2;
   border-radius: 9px;
   border: #c7c7c7 solid 2px;
@@ -103,6 +104,7 @@ body #contain-search-bar #search-bar.original {
   margin-top: 2vh;
 }
 body #contain-search-bar #search-bar.original form input {
+  transition: 0.2s;
   background-color: #e9e5e2;
   border-radius: 9px;
   border: #c7c7c7 solid 2px;
@@ -117,6 +119,7 @@ body #contain-search-bar #search-bar.fixed {
   opacity: 90%;
 }
 body #contain-search-bar #search-bar.fixed form input {
+  transition: 0.2s;
   background-color: #e9e5e2;
   border-radius: 9px;
   border: #c7c7c7 solid 2px;
