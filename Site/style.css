@@ -97,6 +97,7 @@ body #test #contain-search-bar #search-bar form input {
   height: 3vh;
   width: 30vh;
   font-weight: bold;
+  outline: none;
   font-weight: bold;
   font-size: larger;
   padding-left: 1vh;
@@ -119,6 +120,7 @@ body #test #contain-search-bar #search-bar.original form input {
   height: 3vh;
   width: 30vh;
   font-weight: bold;
+  outline: none;
 }
 body #test #contain-search-bar #search-bar.fixed {
   margin-top: 2vh;
@@ -134,6 +136,7 @@ body #test #contain-search-bar #search-bar.fixed form input {
   height: 3vh;
   width: 30vh;
   font-weight: bold;
+  outline: none;
 }
 body #test .container {
   margin: 4vh 0px 4vh 0px;
@@ -173,7 +176,7 @@ body #contain-arrowup #arrow-up {
   width: 7vh;
   height: 7vh;
   border-radius: 9px;
-  border: #c7c7c7 solid 2px;
+  border: #ae3a33 solid 2px;
   position: absolute;
   bottom: 1vh;
   right: 1vh;
@@ -307,4 +310,12 @@ body footer #paiement {
 body footer #paiement img {
   height: 5vh;
   width: 5vh;
+}
+
+@media only screen and (max-width: 1425px) {
+  body footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */
