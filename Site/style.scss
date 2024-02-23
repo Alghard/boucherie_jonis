@@ -222,6 +222,7 @@ body {
                 margin: 20px 5px 20px 5px;
                 border-radius: 7px;
                 background-color: #e9e5e2;
+                outline: none;
             }
             button{
                 margin-left: 60px;
@@ -299,8 +300,8 @@ body {
             align-self: center;
             a{
                 img{
-                    height: 75px;
-                    width: 75px;
+                    height: 7vh;
+                    width: 7vh;
                 }
             }
         }
@@ -321,6 +322,79 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        #paiement{
+            align-self: center;
+        }
+        a{
+            align-self: center;
+        }
+        #footer-icons{
+            flex-wrap: wrap;
+        }
+        #newsletter{
+            margin : 1.5rem 0 1.5rem 0;
+            padding-bottom: 1.5rem;
+        }
         }
     }
 }
+@media only screen and (max-width: 860px) and (min-width:735px){
+    body{
+        footer{
+            #footer-icons{
+                flex-wrap: wrap;
+                #recipe-icon{
+                    border-right: none;
+                }
+            }
+        } 
+    }
+}
+@media only screen and (max-width: 734px) and (min-width:562px){
+    body{
+        footer{
+            #footer-icons{
+                #faq-icon{
+                    border-right: none;
+                }
+            }
+            #bottom-txt{
+                font-size: small;
+            }
+        }
+    }
+}
+@media only screen and (max-width:561px){
+    body{
+        footer{
+            #footer-icons{
+                font-size: small;
+                gap: 20px;
+                .footer-icon{
+                    padding-right: 20px;
+                }
+                #faq-icon{
+                    border-right: none;
+                }
+                div{
+                    a{
+                        img{
+                            height: 3vh;
+                            width: 3vh;
+                        }
+                    }
+                }
+            }
+            #bottom-txt{
+                font-size: small;
+            }
+            a{
+                img{
+                    height: 9vh;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+

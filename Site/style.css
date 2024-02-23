@@ -225,6 +225,7 @@ body footer #newsletter input {
   margin: 20px 5px 20px 5px;
   border-radius: 7px;
   background-color: #e9e5e2;
+  outline: none;
 }
 body footer #newsletter button {
   margin-left: 60px;
@@ -301,8 +302,8 @@ body footer #social-media {
   align-self: center;
 }
 body footer #social-media a img {
-  height: 75px;
-  width: 75px;
+  height: 7vh;
+  width: 7vh;
 }
 body footer #paiement {
   align-self: flex-end;
@@ -317,5 +318,57 @@ body footer #paiement img {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  body footer #paiement {
+    align-self: center;
+  }
+  body footer a {
+    align-self: center;
+  }
+  body footer #footer-icons {
+    flex-wrap: wrap;
+  }
+  body footer #newsletter {
+    margin: 1.5rem 0 1.5rem 0;
+    padding-bottom: 1.5rem;
+  }
+}
+@media only screen and (max-width: 860px) and (min-width: 735px) {
+  body footer #footer-icons {
+    flex-wrap: wrap;
+  }
+  body footer #footer-icons #recipe-icon {
+    border-right: none;
+  }
+}
+@media only screen and (max-width: 734px) and (min-width: 562px) {
+  body footer #footer-icons #faq-icon {
+    border-right: none;
+  }
+  body footer #bottom-txt {
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 561px) {
+  body footer #footer-icons {
+    font-size: small;
+    gap: 20px;
+  }
+  body footer #footer-icons .footer-icon {
+    padding-right: 20px;
+  }
+  body footer #footer-icons #faq-icon {
+    border-right: none;
+  }
+  body footer #footer-icons div a img {
+    height: 3vh;
+    width: 3vh;
+  }
+  body footer #bottom-txt {
+    font-size: small;
+  }
+  body footer a img {
+    height: 9vh;
+    width: auto;
   }
 }/*# sourceMappingURL=style.css.map */
