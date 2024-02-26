@@ -111,7 +111,7 @@ body {
             }
         }
     }
-    #test{
+    #content{
         position: relative;
         #contain-search-bar{
             display: flex;
@@ -314,6 +314,8 @@ body {
         }
     }
 }
+
+
 //Responsiveness
 
 @media only screen and (max-width: 1425px){
@@ -350,11 +352,18 @@ body {
         } 
     }
 }
+@media only screen and (max-width: 776px){
+.logo{
+    width: auto;
+    height: 15vh;
+}
+}
 @media only screen and (max-width: 734px) and (min-width:562px){
     body{
         footer{
             #footer-icons{
                 #faq-icon{
+                    padding-right: 0;
                     border-right: none;
                 }
             }
@@ -369,7 +378,7 @@ body {
         footer{
             #footer-icons{
                 font-size: small;
-                gap: 20px;
+                gap: 25px;
                 .footer-icon{
                     padding-right: 20px;
                 }
@@ -391,6 +400,20 @@ body {
             a{
                 img{
                     height: 9vh;
+                    width: auto;
+                }
+            }
+            #social-media{
+                a{
+                    img{
+                        height: 4vh;
+                        width: auto;
+                    }
+                }
+            }
+            #paiement{
+                img{
+                    height: 3vh;
                     width: auto;
                 }
             }
