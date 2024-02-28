@@ -3,16 +3,19 @@
 const search = document.querySelector("#search-bar");
 const header = document.querySelector("header");
 const headerOffset = header.offsetHeight;
+const blank = document.querySelector("#blank");
 let isFixed = false; // Variable pour suivre si la barre est fixe
 function scrolledSearchBar() {
     // Condition modifiée pour déclencher le changement de classe dès que l'en-tête disparaît de l'écran
-    if (scrollY >= headerOffset - 50 && !isFixed) {
+    if (scrollY >= headerOffset && !isFixed) {
         search.classList.add("fixed");
         search.classList.remove("original");
+        blank.style.height = "47px";
         isFixed = true;
-    } else if (scrollY < headerOffset - 50 && isFixed) {
+    } else if (scrollY < headerOffset && isFixed) {
         search.classList.add("original");
         search.classList.remove("fixed");
+        blank.style.height = "";
         isFixed = false;
     }
 }
