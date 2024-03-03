@@ -45,3 +45,8 @@ widthMatch.addEventListener("change", function (mm) {
         logoHeader.src = "logo/logo_jonis.png";
     }
 });
+
+//FIN script changement source logo
+
+//DEBUT Script autocomplete search value
+
