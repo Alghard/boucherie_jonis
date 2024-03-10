@@ -209,7 +209,8 @@ body #contain-arrowup #arrow-up:hover {
   transform: scale(1.1);
 }
 body footer {
-  height: 30%;
+  position: relative;
+  height: auto;
   width: 100%;
   background-color: #231f20;
   display: grid;
@@ -371,7 +372,6 @@ body footer #paiement img {
 }
 @media only screen and (max-width: 561px) {
   body footer #footer-icons {
-    font-size: small;
     gap: 25px;
   }
   body footer #footer-icons .footer-icon {
@@ -381,8 +381,8 @@ body footer #paiement img {
     border-right: none;
   }
   body footer #footer-icons div a img {
-    height: 3vh;
-    width: 3vh;
+    height: 4vh;
+    width: 4vh;
   }
   body footer #bottom-txt {
     font-size: small;
