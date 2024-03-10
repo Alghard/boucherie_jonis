@@ -90,11 +90,11 @@ body {
         #container-logo-header{
             grid-column: 2;
             a {
+
             text-align: center;
-            align-self: center;
                 img{
                 height: 15vh;
-                width: 60vh;
+                width: 65vh;
                 }
             }
         }
@@ -374,6 +374,7 @@ body {
 }
 @media only screen and (max-width: 734px) and (min-width:562px){
     body{
+        font-size: 1rem;
         footer{
             #footer-icons{
                 #faq-icon{
@@ -381,14 +382,12 @@ body {
                     border-right: none;
                 }
             }
-            #bottom-txt{
-                font-size: small;
-            }
         }
     }
 }
 @media only screen and (max-width:561px){
     body{
+        font-size: 1rem;
         footer{
             #footer-icons{
                 gap: 25px;
@@ -406,9 +405,6 @@ body {
                         }
                     }
                 }
-            }
-            #bottom-txt{
-                font-size: small;
             }
             a{
                 img{
@@ -433,4 +429,3 @@ body {
         }
     }
 }
-

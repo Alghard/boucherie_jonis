@@ -58,11 +58,10 @@ body header #container-logo-header {
 }
 body header #container-logo-header a {
   text-align: center;
-  align-self: center;
 }
 body header #container-logo-header a img {
   height: 15vh;
-  width: 60vh;
+  width: 65vh;
 }
 body header #navbar {
   grid-row: 2;
@@ -362,15 +361,18 @@ body footer #paiement img {
   }
 }
 @media only screen and (max-width: 734px) and (min-width: 562px) {
+  body {
+    font-size: 1rem;
+  }
   body footer #footer-icons #faq-icon {
     padding-right: 0;
     border-right: none;
   }
-  body footer #bottom-txt {
-    font-size: small;
-  }
 }
 @media only screen and (max-width: 561px) {
+  body {
+    font-size: 1rem;
+  }
   body footer #footer-icons {
     gap: 25px;
   }
@@ -383,9 +385,6 @@ body footer #paiement img {
   body footer #footer-icons div a img {
     height: 4vh;
     width: 4vh;
-  }
-  body footer #bottom-txt {
-    font-size: small;
   }
   body footer a img {
     height: 9vh;
