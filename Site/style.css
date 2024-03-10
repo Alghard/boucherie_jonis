@@ -18,6 +18,13 @@ body header {
   margin: 0px;
   padding: 0px;
 }
+body header #burger {
+  display: none;
+  grid-column: 1;
+  justify-self: flex-start;
+  padding-left: 20px;
+  padding-top: 20px;
+}
 body header section {
   grid-column: 3;
   display: flex;
@@ -46,33 +53,38 @@ body header section div a img {
   height: 50px;
   width: 50px;
 }
-body header a {
-  text-align: center;
-  align-self: center;
+body header #container-logo-header {
   grid-column: 2;
 }
-body header a img {
+body header #container-logo-header a {
+  text-align: center;
+  align-self: center;
+}
+body header #container-logo-header a img {
   height: 15vh;
   width: 60vh;
 }
-body header ul {
-  list-style-type: none;
+body header #navbar {
   grid-row: 2;
   grid-column: 1/span 3;
 }
-body header ul li {
-  float: left;
-  margin-right: 70px;
+body header #navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 70px;
 }
-body header ul li #bp {
+body header #navbar ul li {
+  float: left;
+}
+body header #navbar ul li #bp {
   color: #ae3a33;
 }
-body header ul li a {
+body header #navbar ul li a {
   font-weight: bold;
   color: #e9e5e2;
   text-decoration: none;
 }
-body header ul li a:hover {
+body header #navbar ul li a:hover {
   text-decoration: underline;
 }
 body #content {
