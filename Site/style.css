@@ -61,7 +61,7 @@ body header #container-logo-header a {
 }
 body header #container-logo-header a img {
   height: auto;
-  width: 588px;
+  width: 65vh;
 }
 body header #navbar {
   grid-row: 2;
