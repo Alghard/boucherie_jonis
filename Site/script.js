@@ -1,3 +1,12 @@
+function isMobile() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent);
+}
+if (isMobile()) {
+    console.log("Mobile device detected");
+} else {
+    console.log("Desktop device detected");
+}
 //DEBUT Script de sticky search bar
 
 const search = document.querySelector("#search-bar");
@@ -45,8 +54,18 @@ widthMatch.addEventListener("change", function (mm) {
         logoHeader.src = "logo/logo_jonis.png";
     }
 });
+let widthWindow = window.innerWidth;
+window.addEventListener("load", function () {
+    //Je place un event listener sur mon MQ qui réagit au changement de taille
+    if (widthWindow < 776) {
+        //Si la largeur max de mon ecran est inférieure ou égale a mon MQ je met cette src
+        logoFooter.src = "logo/logo_jonis_mini.png";
+        logoHeader.src = "logo/logo_jonis_mini.png";
+    } else {
+        logoFooter.src = "logo/logo_jonis.png"; //Sinon je mets l'autre src
+        logoHeader.src = "logo/logo_jonis.png";
+    }
+});
 
 //FIN script changement source logo
-
-//DEBUT Script autocomplete search value
-
+console.log(widthMatch);

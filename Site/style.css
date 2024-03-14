@@ -60,8 +60,8 @@ body header #container-logo-header a {
   text-align: center;
 }
 body header #container-logo-header a img {
-  height: 15vh;
-  width: 65vh;
+  height: auto;
+  width: 588px;
 }
 body header #navbar {
   grid-row: 2;
@@ -70,7 +70,8 @@ body header #navbar {
 body header #navbar ul {
   list-style-type: none;
   display: flex;
-  gap: 70px;
+  width: 75%;
+  justify-content: space-evenly;
 }
 body header #navbar ul li {
   float: left;
@@ -290,8 +291,8 @@ body footer a {
   grid-column: 2;
 }
 body footer a img {
-  height: 17vh;
-  width: 60vh;
+  height: auto;
+  width: 588px;
 }
 body footer #bottom-txt {
   grid-row: 3;
@@ -326,6 +327,12 @@ body footer #paiement img {
   width: 5vh;
 }
 
+@media only screen and (min-width: 1425px) {
+  body header #navbar ul {
+    width: 100%;
+    gap: 70px;
+  }
+}
 @media only screen and (max-width: 1425px) {
   body footer {
     display: flex;
@@ -352,12 +359,6 @@ body footer #paiement img {
   }
   body footer #footer-icons #recipe-icon {
     border-right: none;
-  }
-}
-@media only screen and (max-width: 776px) {
-  .logo {
-    width: auto;
-    height: 15vh;
   }
 }
 @media only screen and (max-width: 734px) and (min-width: 562px) {
@@ -397,5 +398,15 @@ body footer #paiement img {
   body footer #paiement img {
     height: 3vh;
     width: auto;
+  }
+}
+@media all and (max-width: 420px) {
+  body header #container-logo-header a img {
+    width: 200px;
+    height: auto;
+  }
+  body footer a img {
+    width: 200px;
+    height: auto;
   }
 }/*# sourceMappingURL=style.css.map */
