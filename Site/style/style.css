@@ -87,21 +87,21 @@ body header #navbar ul li a {
 body header #navbar ul li a:hover {
   text-decoration: underline;
 }
-body #content {
+body main {
   position: relative;
 }
-body #content #contain-search-bar {
+body main #contain-search-bar {
   display: flex;
   justify-content: center;
 }
-body #content #contain-search-bar #search-bar {
+body main #contain-search-bar #search-bar {
   margin-top: 2vh;
 }
-body #content #contain-search-bar #search-bar form {
+body main #contain-search-bar #search-bar form {
   display: flex;
   flex-direction: row-reverse;
 }
-body #content #contain-search-bar #search-bar form input {
+body main #contain-search-bar #search-bar form input {
   transition: 0.2s;
   background-color: #e9e5e2;
   border-radius: 9px;
@@ -114,17 +114,17 @@ body #content #contain-search-bar #search-bar form input {
   font-size: larger;
   padding-left: 1vh;
 }
-body #content #contain-search-bar #search-bar form button {
+body main #contain-search-bar #search-bar form button {
   position: absolute;
   background: none;
   border: none;
   align-self: center;
   cursor: pointer;
 }
-body #content #contain-search-bar #search-bar.original {
+body main #contain-search-bar #search-bar.original {
   margin-top: 2vh;
 }
-body #content #contain-search-bar #search-bar.original form input {
+body main #contain-search-bar #search-bar.original form input {
   transition: 0.2s;
   background-color: #e9e5e2;
   border-radius: 9px;
@@ -134,13 +134,13 @@ body #content #contain-search-bar #search-bar.original form input {
   font-weight: bold;
   outline: none;
 }
-body #content #contain-search-bar #search-bar.fixed {
+body main #contain-search-bar #search-bar.fixed {
   margin-top: 2vh;
   position: fixed;
   top: 0;
   opacity: 90%;
 }
-body #content #contain-search-bar #search-bar.fixed form input {
+body main #contain-search-bar #search-bar.fixed form input {
   transition: 0.2s;
   background-color: #e9e5e2;
   border-radius: 9px;
@@ -150,17 +150,17 @@ body #content #contain-search-bar #search-bar.fixed form input {
   font-weight: bold;
   outline: none;
 }
-body #content .container {
+body main .container {
   margin: 4vh 0px 4vh 0px;
   height: 60vh;
   border: solid 5px #ae3a33;
   display: flex;
   justify-content: center;
 }
-body #content .container .container-img {
+body main .container .container-img {
   width: 100%;
 }
-body #content .container .container-img img {
+body main .container .container-img img {
   height: 100%;
   width: 100%;
 }
