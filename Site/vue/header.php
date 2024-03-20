@@ -42,10 +42,9 @@
             <div id="blank"></div>
             <div id="contain-search-bar">
                 <div id="search-bar">
-                    <form action="page.php" method="post" autocomplete="off">
-                        <input id="search" type="text" placeholder="Rechercher..." onKeyUp="showResults(this.value)" />
-                        <button type="submit"><img src="icons/loupe.svg" width="30px" height="30px" alt="" /></button>
-                        <div id="result"></div>
+                    <form action="controller_result.php" method="post" autocomplete="off">
+                        <input id="search" type="text" placeholder="Rechercher..." onKeyUp="showResults(this.value)" name="search" />
+                        <button type="submit" name="submit"><img src="icons/loupe.svg" width="30px" height="30px" alt="" /></button>
                     </form>
                 </div>
             </div>
