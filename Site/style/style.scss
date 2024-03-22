@@ -177,39 +177,40 @@ body {
             display: flex;
             align-self: center;
             justify-content: center;
+            width: 75%;
             .container-img{
-                width: 100%;
                 img{
                     height: 100%;
                     width: 100%;
                 }
             }
         }
-    }
-    #gotoshopbtn{
-        text-align: center;
-        a{
-            font-weight: bold;
-            color: #e9e5e2;
-            background-color: #ae3a33;
-            text-decoration: none;
-            border-radius: 1.5vh;
-            border: #ae3a33 solid 2px;
-            padding: 1vh 3vh 1vh 3vh;
-            &:hover{
-                color: #ae3a33;
-                background-color: #e9e5e2;
-                text-decoration: underline;
+        #gotoshopbtn{
+            text-align: center;
+            a{
+                font-weight: bold;
+                color: #e9e5e2;
+                background-color: #ae3a33;
+                text-decoration: none;
+                border-radius: 1.5vh;
+                border: #ae3a33 solid 2px;
+                padding: 1vh 3vh 1vh 3vh;
+                &:hover{
+                    color: #ae3a33;
+                    background-color: #e9e5e2;
+                    text-decoration: underline;
+                }
+            }
+        }
+        #contain-arrowup{
+            height: 10vh;
+            position: relative;
+            #arrow-up{
+                @include arrow-up-layout()
             }
         }
     }
-    #contain-arrowup{
-        height: 10vh;
-        position: relative;
-        #arrow-up{
-            @include arrow-up-layout()
-        }
-    }
+
     footer{
         position: relative;
         height: auto;
