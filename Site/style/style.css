@@ -19,11 +19,88 @@ body header {
   padding: 0px;
 }
 body header #burger {
-  display: none;
   grid-column: 1;
   justify-self: flex-start;
   padding-left: 20px;
   padding-top: 20px;
+}
+body header #burger button {
+  background-color: #231f20;
+  border: none;
+}
+body header #burger button .container {
+  position: relative;
+}
+body header #burger button .toggle {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: #ae3a33;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+body header #burger button .toggle span {
+  position: absolute;
+  background-color: rgb(242, 211, 160);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+  height: 4px;
+}
+body header #burger button .toggle .line {
+  width: 40px;
+}
+body header #burger button .toggle .dot {
+  width: 4px;
+}
+body header #burger button .toggle span:nth-child(1) {
+  translate: -25px -15px;
+}
+body header #burger button .toggle span:nth-child(2) {
+  translate: 5px -15px;
+}
+body header #burger button .toggle span:nth-child(3) {
+  translate: -25px;
+}
+body header #burger button .toggle span:nth-child(4) {
+  translate: 5px;
+}
+body header #burger button .toggle span:nth-child(5) {
+  translate: -25px 15px;
+}
+body header #burger button .toggle span:nth-child(6) {
+  translate: 5px 15px;
+}
+body header #burger button .toggle.toggle:hover span:nth-child(1) {
+  transform: scale(1.4) translateX(15px) translateY(5px);
+}
+body header #burger button .toggle.toggle:hover span:nth-child(2) {
+  width: 45px;
+  transform: translateX(-17px) translateY(18px) rotate(60deg);
+  transition-delay: 0.125s;
+}
+body header #burger button .toggle.toggle:hover span:nth-child(3) {
+  transform: scale(1.3) translateX(20px) translateY(4px);
+}
+body header #burger button .toggle.toggle:hover span:nth-child(4) {
+  width: 45px;
+  transform: translateX(6px) translateY(3px) rotate(300deg);
+}
+body header #burger button .toggle.toggle:hover span:nth-child(5) {
+  background-color: black;
+  transform: scale(1.6) translateX(22px) translateY(-15px);
+}
+body header #burger button .toggle.toggle:hover span:nth-child(6) {
+  height: 7px;
+  width: 46px;
+  transform: translateX(-6px) translateY(-32px);
+  border-radius: 100% 100% 50% 50%;
 }
 body header section {
   grid-column: 3;
@@ -61,7 +138,7 @@ body header #container-logo-header a {
 }
 body header #container-logo-header a img {
   height: auto;
-  width: 65vh;
+  width: 62vh;
 }
 body header #navbar {
   grid-row: 2;

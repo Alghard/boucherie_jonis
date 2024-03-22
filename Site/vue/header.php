@@ -10,7 +10,18 @@
     <body>
         <header>
             <div id="burger">
-                <button><img src="icons/menu-burger-horizontal-svgrepo-com.svg" alt="" width="50px" height="50px" /></button>
+                <button>
+                    <div class="container">
+                    <div class="toggle">
+                        <span class="dot"></span>
+                        <span class="line"></span>
+                        <span class="dot"></span>
+                        <span class="line"></span>
+                        <span class="dot"></span>
+                        <span class="line"></span>
+                    </div>
+                    </div>
+                </button>
             </div>
             <div id="container-logo-header">
                 <a href="controller.php"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-header" /></a>
