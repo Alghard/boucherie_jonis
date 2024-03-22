@@ -125,6 +125,8 @@ body {
     }
     main{
         position: relative;
+        display: flex;
+        flex-direction: column;
         #contain-search-bar{
             display: flex;
             justify-content: center;
@@ -173,6 +175,7 @@ body {
             height: 60vh;
             border: solid 5px #ae3a33;
             display: flex;
+            align-self: center;
             justify-content: center;
             .container-img{
                 width: 100%;
