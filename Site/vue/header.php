@@ -13,7 +13,7 @@
                 <button><img src="icons/menu-burger-horizontal-svgrepo-com.svg" alt="" width="50px" height="50px" /></button>
             </div>
             <div id="container-logo-header">
-                <a href="index.html"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-header" /></a>
+                <a href="controller.php"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-header" /></a>
             </div>
             <div id="navbar">
                 <ul>
