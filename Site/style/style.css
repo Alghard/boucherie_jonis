@@ -169,6 +169,42 @@ body main {
   display: flex;
   flex-direction: column;
 }
+body main section {
+  display: flex;
+}
+body main section .article {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20dvh;
+  height: 30dvh;
+  border: #c7c7c7 solid 2px;
+  padding: 3px;
+  margin: 1dvh;
+  justify-content: center;
+}
+body main section .article img {
+  align-self: center;
+  width: 18dvh;
+  height: 12dvh;
+}
+body main section .article .viande {
+  width: 18dvh;
+}
+body main section .article .prix {
+  width: 40%;
+}
+body main section .article .prix-kg {
+  width: 50%;
+}
+body main section .article form {
+  width: 18dvh;
+}
+body main section .article form input:nth-child(1) {
+  width: 20%;
+}
+body main section .article form input:nth-child(2) {
+  width: 70%;
+}
 body main #contain-search-bar {
   display: flex;
   justify-content: center;
