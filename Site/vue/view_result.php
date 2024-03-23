@@ -4,6 +4,6 @@
 <section>
     <p>IL VA FALLOIR FRONT TOUT CA LA PARCE QUE CEST PAS JOLIJOLI</p>
     <?php
-    displayArticles($article);
+    echo $result;
     ?>
 </section>
