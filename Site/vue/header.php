@@ -11,7 +11,6 @@
         <header>
             <div id="burger">
                 <button>
-                    <div class="container">
                     <div class="toggle">
                         <span class="dot"></span>
                         <span class="line"></span>
@@ -19,7 +18,6 @@
                         <span class="line"></span>
                         <span class="dot"></span>
                         <span class="line"></span>
-                    </div>
                     </div>
                 </button>
             </div>

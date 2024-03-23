@@ -53,7 +53,6 @@ body {
         margin: 0px;
         padding: 0px;
         #burger {
-            // display: none;
             grid-column: 1;
             justify-self: flex-start;
             padding-left: 20px;
@@ -61,32 +60,28 @@ body {
             button{
                 background-color: #231f20;
                 border: none;
-                .container {
-                    position: relative;
-                }
                 .toggle {
                     position: relative;
                     width: 70px;
                     height: 70px;
                     background-color: #ae3a33;
-                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-                    border-radius: 50%;
+                    border-radius: 50%;                             //Border radius a 50% pour former un cercle
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
                     align-items: center;
                     cursor: pointer;
-                    overflow: hidden;
+                    overflow: hidden;                               //Masque le débordement
                 }
-                .toggle span{
-                    position: absolute;
-                    background-color: rgb(242, 211, 160);
+                .toggle span{                                       //Me permet de donner une couleur,
+                    position: absolute;                             //une épaisseur et des bords identique 
+                    background-color: rgb(242, 211, 160);         //à tous mes spans
                     border-radius: 4px;
                     cursor: pointer;
                     transition: 0.5s;
                     height: 4px;
-                }
-                .toggle .line{
+                }                                                   //A partir d'ici je défini taille
+                .toggle .line{                                      // et position a chaque span
                     width: 40px;
                 }
                 
@@ -117,7 +112,7 @@ body {
                 .toggle span:nth-child(6){
                     translate : 5px 15px;
                 }
-                
+                                                                //Ici modification de chaque span au hover(plus tard aussi au clic)
                 .toggle.toggle:hover span:nth-child(1){
                     transform: scale(1.4) translateX(15px) translateY(5px);
                 }

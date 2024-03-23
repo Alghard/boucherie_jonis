@@ -28,15 +28,11 @@ body header #burger button {
   background-color: #231f20;
   border: none;
 }
-body header #burger button .container {
-  position: relative;
-}
 body header #burger button .toggle {
   position: relative;
   width: 70px;
   height: 70px;
   background-color: #ae3a33;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
   display: flex;
   flex-wrap: wrap;

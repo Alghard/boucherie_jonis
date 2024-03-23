@@ -11,7 +11,6 @@ if(isset($_POST['submit'])){
 }
 $result = "";
 if($article != null){
-    //boucle for each qui va parcourir le tableau articles
     $result = displayResult($article);
 }else{
     $result = "No results SRY";
