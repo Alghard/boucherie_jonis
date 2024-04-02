@@ -9,20 +9,20 @@ body {
   position: relative;
 }
 body header {
-  height: 20vh;
+  height: 22dvh;
   width: 100%;
   background-color: #231f20;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: 2fr 0.2fr;
   justify-items: center;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 body header #burger {
+  display: none;
   grid-column: 1;
-  justify-self: flex-start;
-  padding-left: 20px;
-  padding-top: 20px;
+  justify-self: center;
 }
 body header #burger button {
   background-color: #231f20;
@@ -105,46 +105,54 @@ body header section {
   align-items: flex-start;
   justify-self: end;
   gap: 5px;
+  margin-top: 0.5dvh;
+  margin-right: 0.5dvh;
 }
 body header section div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-self: flex-start;
-  margin-top: 30px;
-  margin-right: 20px;
+  gap: 0.5dvh;
 }
 body header section div a {
+  width: 8dvh;
+  height: 5dvh;
   font-weight: bold;
   color: #e9e5e2;
   text-decoration: none;
+  text-align: center;
 }
 body header section div a:hover {
   text-decoration: underline;
 }
 body header section div a img {
-  height: 50px;
-  width: 50px;
+  height: 100%;
+  width: 100%;
 }
 body header #container-logo-header {
   grid-column: 2;
+  width: auto;
+  height: 18dvh;
 }
 body header #container-logo-header a {
   text-align: center;
 }
 body header #container-logo-header a img {
-  height: auto;
-  width: 62vh;
+  height: 100%;
+  width: 100%;
 }
 body header #navbar {
   grid-row: 2;
   grid-column: 1/span 3;
+  justify-self: center;
 }
 body header #navbar ul {
+  padding: 0.5dvh;
   list-style-type: none;
   display: flex;
-  width: 75%;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 7dvh;
 }
 body header #navbar ul li {
   float: left;
@@ -215,8 +223,8 @@ body main #contain-search-bar #search-bar form {
 body main #contain-search-bar #search-bar form input {
   transition: 0.2s;
   background-color: #e9e5e2;
-  border-radius: 9px;
-  border: #c7c7c7 solid 2px;
+  border-radius: 1dvh;
+  border: #c7c7c7 solid 0.2dvh;
   height: 3vh;
   width: 30vh;
   font-weight: bold;
@@ -238,8 +246,8 @@ body main #contain-search-bar #search-bar.original {
 body main #contain-search-bar #search-bar.original form input {
   transition: 0.2s;
   background-color: #e9e5e2;
-  border-radius: 9px;
-  border: #c7c7c7 solid 2px;
+  border-radius: 1dvh;
+  border: #c7c7c7 solid 0.2dvh;
   height: 3vh;
   width: 30vh;
   font-weight: bold;
@@ -254,8 +262,8 @@ body main #contain-search-bar #search-bar.fixed {
 body main #contain-search-bar #search-bar.fixed form input {
   transition: 0.2s;
   background-color: #e9e5e2;
-  border-radius: 9px;
-  border: #c7c7c7 solid 2px;
+  border-radius: 1dvh;
+  border: #c7c7c7 solid 0.2dvh;
   height: 3vh;
   width: 30vh;
   font-weight: bold;
@@ -296,9 +304,9 @@ body main #contain-arrowup {
   position: relative;
 }
 body main #contain-arrowup #arrow-up {
-  width: 7vh;
-  height: 7vh;
-  border-radius: 9px;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 1vh;
   border: #ae3a33 solid 2px;
   position: absolute;
   bottom: 1vh;
@@ -309,8 +317,8 @@ body main #contain-arrowup #arrow-up a {
   cursor: pointer;
 }
 body main #contain-arrowup #arrow-up a img {
-  width: 7vh;
-  height: 7vh;
+  width: 5vh;
+  height: 5vh;
 }
 body main #contain-arrowup #arrow-up a:hover img {
   transform: scale(1.2);
@@ -320,12 +328,12 @@ body main #contain-arrowup #arrow-up:hover {
 }
 body footer {
   position: relative;
-  height: auto;
+  height: 50dvh;
   width: 100%;
   background-color: #231f20;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 0.2fr;
+  grid-template-rows: 3fr 1fr 0.2fr;
   justify-items: center;
 }
 body footer #newsletter {
@@ -337,8 +345,8 @@ body footer #newsletter {
   justify-content: center;
   margin-top: 10vh;
   margin-bottom: 10vh;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 5dvw;
+  padding-right: 5dvw;
 }
 body footer #newsletter h4 {
   color: #e9e5e2;
@@ -359,23 +367,19 @@ body footer #newsletter button {
   color: #231f20;
 }
 body footer #footer-icons {
-  margin-top: 50px;
   grid-row: 1;
   grid-column: 2;
   display: flex;
-  justify-self: stretch;
   justify-content: center;
   align-self: center;
   gap: 40px;
 }
-body footer #footer-icons .footer-icon {
-  border-right: #ae3a33 solid 2px;
-  padding-right: 30px;
+body footer #footer-icons .line {
+  border: #ae3a33 solid 0.1dvh;
 }
 body footer #footer-icons div {
   display: flex;
   flex-direction: column;
-  justify-self: center;
   align-self: center;
   gap: 10px;
 }
@@ -383,26 +387,28 @@ body footer #footer-icons div a {
   font-weight: bold;
   color: #e9e5e2;
   text-decoration: none;
-  justify-self: center;
   align-self: center;
+  text-align: center;
 }
 body footer #footer-icons div a:hover {
   text-decoration: underline;
 }
 body footer #footer-icons div a img {
-  height: 75px;
-  width: 75px;
+  height: 8dvh;
+  width: 8dvh;
 }
-body footer a {
+body footer #contain-logo-footer {
+  width: auto;
+  height: 20dvh;
   grid-row: 2;
   grid-column: 1/span 3;
   text-align: center;
   align-self: flex-end;
   grid-column: 2;
 }
-body footer a img {
-  height: auto;
-  width: 588px;
+body footer #contain-logo-footer a img {
+  height: 100%;
+  width: 100%;
 }
 body footer #bottom-txt {
   grid-row: 3;
@@ -437,14 +443,12 @@ body footer #paiement img {
   width: 5vh;
 }
 
-@media only screen and (min-width: 1425px) {
+@media only screen and (max-width: 1410px) {
   body header #navbar ul {
-    width: 100%;
-    gap: 70px;
+    gap: 5dvh;
   }
-}
-@media only screen and (max-width: 1425px) {
   body footer {
+    height: 67dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -452,7 +456,7 @@ body footer #paiement img {
   body footer #paiement {
     align-self: center;
   }
-  body footer a {
+  body footer #contain-logo-footer {
     align-self: center;
   }
   body footer #footer-icons {
@@ -463,60 +467,53 @@ body footer #paiement img {
     padding-bottom: 1.5rem;
   }
 }
-@media only screen and (max-width: 860px) and (min-width: 735px) {
-  body footer #footer-icons {
-    flex-wrap: wrap;
-  }
-  body footer #footer-icons #recipe-icon {
-    border-right: none;
+@media only screen and (max-width: 1120px) {
+  body header #navbar ul {
+    gap: 3dvh;
   }
 }
-@media only screen and (max-width: 734px) and (min-width: 562px) {
-  body {
-    font-size: 1rem;
+@media only screen and (max-width: 923px) {
+  body header #burger {
+    display: block;
+    align-self: center;
   }
-  body footer #footer-icons #faq-icon {
-    padding-right: 0;
-    border-right: none;
+  body header #navbar {
+    display: none;
   }
-}
-@media only screen and (max-width: 561px) {
-  body {
-    font-size: 1rem;
+  body header section {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    margin-right: 0;
+    gap: 2dvh;
   }
-  body footer #footer-icons {
-    gap: 25px;
-  }
-  body footer #footer-icons .footer-icon {
-    padding-right: 20px;
-  }
-  body footer #footer-icons #faq-icon {
-    border-right: none;
-  }
-  body footer #footer-icons div a img {
-    height: 4vh;
-    width: 4vh;
-  }
-  body footer a img {
-    height: 9vh;
-    width: auto;
-  }
-  body footer #social-media a img {
-    height: 4vh;
-    width: auto;
-  }
-  body footer #paiement img {
-    height: 3vh;
-    width: auto;
+  body header section div .header-txt {
+    display: none;
   }
 }
-@media all and (max-width: 420px) {
-  body header #container-logo-header a img {
-    width: 200px;
-    height: auto;
+@media only screen and (max-width: 923px) {
+  body footer {
+    height: 80dvh;
   }
-  body footer a img {
-    width: 200px;
-    height: auto;
+  body footer #footer-icons .footer-icon a img {
+    width: 5dvh;
+    height: 5dvh;
+  }
+}
+@media only screen and (max-width: 535px) {
+  body footer {
+    height: 90dvh;
+  }
+}
+@media only screen and (max-width: 430px) {
+  body footer {
+    height: 104dvh;
+  }
+  body footer #footer-icons .line:nth-of-type(even) {
+    display: none;
+  }
+  body footer #footer-icons .footer-icon a img {
+    width: 5dvh;
+    height: 5dvh;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -38,12 +38,12 @@
             </div>
             <section>
                 <div>
-                    <a href="panier.html"><img src="icons/panier.svg" alt="basket" width="50px" height="50px" /></a>
-                    <a href="panier.html">Mon Panier</a>
+                    <a href="panier.html" class="header-icons"><img src="icons/panier.svg" alt="basket" /></a>
+                    <a href="panier.html" class="header-txt">Mon Panier</a>
                 </div>
                 <div>
-                    <a href="profil.html"><img src="icons/utilisateur.svg" alt="user" width="50px" height="50px" /></a>
-                    <a href="profil.html">Mon Compte</a>
+                    <a href="profil.html" class="header-icons"><img src="icons/utilisateur.svg" alt="user"/></a>
+                    <a href="profil.html" class="header-txt">Mon Compte</a>
                 </div>
             </section>
         </header>

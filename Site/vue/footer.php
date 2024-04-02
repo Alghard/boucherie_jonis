@@ -11,24 +11,28 @@
                     <a href="profil.html"><img src="icons/contact.svg" alt="user" /></a>
                     <a href="profil.html">Nous contacter</a>
                 </div>
+                <span class="line"></span>
                 <div class="footer-icon">
                     <a href="profil.html"><img src="icons/evaluation.png" alt="user" /></a>
                     <a href="profil.html">Avis clients</a>
                 </div>
+                <span class="line"></span>
                 <div class="footer-icon" id="faq-icon">
                     <a href="profil.html"><img src="icons/faq.svg" alt="user" id="faq-icon" /></a>
                     <a href="profil.html">Questions fréquentes</a>
                 </div>
+                <span class="line"></span>
                 <div class="footer-icon" id="recipe-icon">
                     <a href="profil.html"><img src="icons/recipe.svg" alt="user" /></a>
                     <a href="profil.html">Nos recettes</a>
                 </div>
+                <span class="line"></span>
                 <div>
                     <a href="profil.html"><img src="icons/news.svg" alt="user" /></a>
                     <a href="profil.html">Notre actu</a>
                 </div>
             </div>
-            <a href="controller.php"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-footer" /></a>
+            <div id="contain-logo-footer"><a href="controller.php"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-footer" /></a></div>
             <div id="social-media">
                 <a href="https://www.facebook.com/profile.php?id=100088735015486" target="_blank"
                     ><img src="icons/facebook.svg" alt="facebook-boucherie-jonis"
