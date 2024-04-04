@@ -22,7 +22,7 @@
                 </button>
             </div>
             <div id="container-logo-header">
-                <a href="controller.php"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-header" /></a>
+                <a href="index.php"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-header" /></a>
             </div>
             <div id="navbar">
                 <ul>

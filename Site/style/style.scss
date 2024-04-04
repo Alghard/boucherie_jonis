@@ -227,36 +227,42 @@ body {
         flex-direction: column;
         section{
             display: flex;
-            .article{
+            #result{
+                flex-grow: 1;
+                flex-basis: content;
                 display: flex;
                 flex-wrap: wrap;
-                width: 20dvh;
-                height: 30dvh;
-                border: #c7c7c7 solid 2px;
-                padding: 3px;
-                margin: 1dvh;
-                justify-content: center;
-                img{
-                    align-self: center;
-                    width: 18dvh;
-                    height: 12dvh;
-                }
-                .viande{
-                    width: 18dvh;
-                }
-                .prix{
-                    width: 40%;
-                }
-                .prix-kg{
-                    width: 50%;
-                }
-                form{
-                    width: 18dvh;
-                    input:nth-child(1){
-                        width: 20%;
+                .article{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 20dvh;
+                    height: 450px;
+                    border: #c7c7c7 solid 2px;
+                    padding: 3px;
+                    margin: 0.2dvh;
+                    justify-content: center;
+                    img{
+                        align-self: center;
+                        width: 18dvh;
+                        height: 12dvh;
                     }
-                    input:nth-child(2){
-                        width:70%;
+                    .viande{
+                        width: 18dvh;
+                    }
+                    .prix{
+                        width: 40%;
+                    }
+                    .prix-kg{
+                        width: 50%;
+                    }
+                    form{
+                        width: 18dvh;
+                        input:nth-child(1){
+                            width: 20%;
+                        }
+                        input:nth-child(2){
+                            width:70%;
+                        }
                     }
                 }
             }

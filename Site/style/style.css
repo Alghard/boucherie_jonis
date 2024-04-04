@@ -179,37 +179,43 @@ body main {
 body main section {
   display: flex;
 }
-body main section .article {
+body main section #result {
+  flex-grow: 1;
+  flex-basis: content;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main section #result .article {
   display: flex;
   flex-wrap: wrap;
   width: 20dvh;
-  height: 30dvh;
+  height: 450px;
   border: #c7c7c7 solid 2px;
   padding: 3px;
-  margin: 1dvh;
+  margin: 0.2dvh;
   justify-content: center;
 }
-body main section .article img {
+body main section #result .article img {
   align-self: center;
   width: 18dvh;
   height: 12dvh;
 }
-body main section .article .viande {
+body main section #result .article .viande {
   width: 18dvh;
 }
-body main section .article .prix {
+body main section #result .article .prix {
   width: 40%;
 }
-body main section .article .prix-kg {
+body main section #result .article .prix-kg {
   width: 50%;
 }
-body main section .article form {
+body main section #result .article form {
   width: 18dvh;
 }
-body main section .article form input:nth-child(1) {
+body main section #result .article form input:nth-child(1) {
   width: 20%;
 }
-body main section .article form input:nth-child(2) {
+body main section #result .article form input:nth-child(2) {
   width: 70%;
 }
 body main #contain-search-bar {

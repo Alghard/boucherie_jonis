@@ -32,7 +32,7 @@
                     <a href="profil.html">Notre actu</a>
                 </div>
             </div>
-            <div id="contain-logo-footer"><a href="controller.php"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-footer" /></a></div>
+            <div id="contain-logo-footer"><a href="index.php"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-footer" /></a></div>
             <div id="social-media">
                 <a href="https://www.facebook.com/profile.php?id=100088735015486" target="_blank"
                     ><img src="icons/facebook.svg" alt="facebook-boucherie-jonis"
