@@ -184,39 +184,84 @@ body main section #result {
   flex-basis: content;
   display: flex;
   flex-wrap: wrap;
+  font-family: "Open Sans";
 }
 body main section #result .article {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 20dvh;
-  height: 450px;
+  width: 300px;
+  height: 500px;
   border: #c7c7c7 solid 2px;
   padding: 3px;
-  margin: 0.2dvh;
+  margin: 0.5dvh;
+  justify-content: space-around;
+}
+body main section #result .article .entete {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
-body main section #result .article img {
+body main section #result .article .entete img {
   align-self: center;
   width: 18dvh;
   height: 12dvh;
 }
-body main section #result .article .viande {
+body main section #result .article .entete .nom-article {
+  height: 35px;
+  align-self: center;
+  font-size: 1.3rem;
+  text-align: center;
+}
+body main section #result .article .entete .viande {
   width: 18dvh;
+  align-self: start;
 }
 body main section #result .article .prix {
-  width: 40%;
+  display: flex;
+  justify-content: space-between;
 }
-body main section #result .article .prix-kg {
-  width: 50%;
+body main section #result .article .prix .prix-unit {
+  padding-left: 0.5dvh;
+  align-self: baseline;
+  color: #ae3a33;
+  font-weight: bolder;
+  font-size: 2rem;
 }
-body main section #result .article form {
+body main section #result .article .prix .prix-kg {
+  align-self: baseline;
+  text-align: end;
+  font-size: small;
+}
+body main section #result .article .add-article {
+  align-self: center;
+}
+body main section #result .article .add-article form {
   width: 18dvh;
 }
-body main section #result .article form input:nth-child(1) {
+body main section #result .article .add-article form input:nth-child(1) {
   width: 20%;
+  border-radius: 0.5vh;
+  border: #c7c7c7 solid 2px;
+  padding: 1dvh 0.5dvh 1dvh 0.5dvh;
 }
-body main section #result .article form input:nth-child(2) {
+body main section #result .article .add-article form input:nth-child(2) {
+  font-family: "Open Sans";
   width: 70%;
+  cursor: pointer;
+  font-weight: bold;
+  color: #e9e5e2;
+  background-color: #ae3a33;
+  text-decoration: none;
+  border-radius: 1.5vh;
+  border: #ae3a33 solid 2px;
+  padding: 1vh 3vh 1vh 3vh;
+  border-radius: 1vh;
+}
+body main section #result .article .add-article form input:nth-child(2):hover {
+  color: #ae3a33;
+  background-color: #e9e5e2;
+  text-decoration: underline;
 }
 body main #contain-search-bar {
   display: flex;
@@ -295,6 +340,7 @@ body main #gotoshopbtn {
   text-align: center;
 }
 body main #gotoshopbtn a {
+  cursor: pointer;
   font-weight: bold;
   color: #e9e5e2;
   background-color: #ae3a33;

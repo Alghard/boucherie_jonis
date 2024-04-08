@@ -69,3 +69,17 @@ window.addEventListener("load", function () {
 
 //FIN script changement source logo
 console.log(widthMatch);
+
+let number = document.querySelector('#qty')
+
+function inc(element) {
+    let el = document.querySelector(`[name="${element}"]`);
+    el.value = parseInt(el.value) + 1;
+}
+
+function dec(element) {
+    let el = document.querySelector(`[name="${element}"]`);
+    if (parseInt(el.value) > 1) {
+        el.value = parseInt(el.value) - 1;
+    }
+}
