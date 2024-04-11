@@ -257,7 +257,7 @@ body {
                     height: 500px;
                     border: #c7c7c7 solid 2px;
                     padding: 3px;
-                    margin: 0.5dvh;
+                    margin: 1dvh;
                     justify-content:space-around;
                     .entete{
                         display: flex;
@@ -265,8 +265,8 @@ body {
                         justify-content: center;
                         img{
                             align-self: center;
-                            width: 18dvh;
-                            height: 12dvh;
+                            width: 90%;
+                            height: auto;
                         }
                         .nom-article{
                             height: 35px;
@@ -275,7 +275,7 @@ body {
                             text-align: center;
                         }
                         .viande{
-                            width: 18dvh;
+                            width: 100%;
                             align-self: start;
                         }
                     }
@@ -298,7 +298,7 @@ body {
                     .add-article{
                         align-self: center;
                         form{
-                            width: 18dvh;
+                            width: 100%;
                             input:nth-child(1){
                                 width: 20%;
                                 border-radius: 0.5vh;

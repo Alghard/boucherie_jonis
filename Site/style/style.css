@@ -194,7 +194,7 @@ body main section #result .article {
   height: 500px;
   border: #c7c7c7 solid 2px;
   padding: 3px;
-  margin: 0.5dvh;
+  margin: 1dvh;
   justify-content: space-around;
 }
 body main section #result .article .entete {
@@ -204,8 +204,8 @@ body main section #result .article .entete {
 }
 body main section #result .article .entete img {
   align-self: center;
-  width: 18dvh;
-  height: 12dvh;
+  width: 90%;
+  height: auto;
 }
 body main section #result .article .entete .nom-article {
   height: 35px;
@@ -214,7 +214,7 @@ body main section #result .article .entete .nom-article {
   text-align: center;
 }
 body main section #result .article .entete .viande {
-  width: 18dvh;
+  width: 100%;
   align-self: start;
 }
 body main section #result .article .prix {
@@ -237,7 +237,7 @@ body main section #result .article .add-article {
   align-self: center;
 }
 body main section #result .article .add-article form {
-  width: 18dvh;
+  width: 100%;
 }
 body main section #result .article .add-article form input:nth-child(1) {
   width: 20%;

@@ -9,12 +9,12 @@ if(isset($_POST['submit'])){
         $article = searchArticle($bdd,$search);
     }     
 }
-$result = "";
-if($article != null){
-    $result = displayResult($article);
-}else{
-    $result = "No results SRY";
-}
+// $result = "";
+// if($article != null){
+//     $result = displayResult($article);
+// }else{
+//     $result = "No results SRY";
+// }
 
 include "./vue/header.php";
 include './vue/view_result.php';
