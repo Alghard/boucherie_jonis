@@ -4,12 +4,12 @@
 <h3>Résultats de votre recherche : </h3>
 <section>
     <div id="result">
-            <?php foreach ($article as $item): ?>
+            <?php foreach ($result as $item): ?>
                 <div class='article'>
                     <div class='entete'>
                         <img src='<?php echo $item['url_image']?>'/>
                         <h3 class='nom-article'><?php echo $item['nom_article']?></h3>
-                        <p class='viande'><?php echo $item['nom_animal']?> Origine <?php echo $item['origine_animal'] ?></p>
+                        <p class='viande'><?php echo $item['nom_animal']?> Origine <?php echo $item['pays_origine'] ?></p>
                     </div>
                     <div class='prix'>
                         <p class='prix-unit'><?php echo $item['prix_unit_article']?>€</p>

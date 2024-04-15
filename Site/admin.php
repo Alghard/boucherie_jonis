@@ -13,6 +13,8 @@ $messageAnimal = '';
 $messageType = '';
 $liste_article = '';
 $listAnimal = '';
+$taxe = new Taxe();
+$tva = $taxe->setBdd(connect())->getTauxTaxe();
 
 //Ajout d'une race
 if(isset($_POST['submitRace'])){
@@ -85,12 +87,23 @@ if(isset($_POST["submitAnimal"])){
     }
 }
 
+//Ajout article
+
+
+
 //AFFICHAGE
 $task = new Animal();
 $task->setBdd(connect());
 $dataTask = $task->getAnimals();
 foreach($dataTask as $task){
     $listAnimal = $listAnimal."<li><h3>".$task['nom_animal']."</h3><p>Origine : ".$task['pays_origine']."</p><p>Race : ".$task['nom_race']."</p><p>Catégorie : ".$task['id_animal']."</p></li>";
+}
+
+$try = new Article();
+$try->setBdd(connect());
+$dataArticles = $try->getAllArticles();
+foreach($dataArticles as $article){
+    $liste_article = $liste_article."<li><h3>".$article['id_article']." : ".$article['nom_article']."</h3><p>Prix unit : ".$article['prix_unit_article']."€</p><p>Prix au kg : ".$article['prix_kg_article']."€</p><p>Stock ? : ".$article['stock_article']."</li>";
 }
 
 
@@ -109,6 +122,14 @@ $races->setBdd(connect());
 $data = $races->getRaces();
 foreach ($data as $race){
     $optionRace = $optionRace."<option value='".$race['id_race']."'>".$race['nom_race']."</option>";
+}
+
+$optionAnimal ='';
+$animals = new Animal();
+$animals->setBdd(connect());
+$dataAnimals = $animals->getAnimals();
+foreach ($dataAnimals as $animal){
+    $optionAnimal = $optionAnimal."<option value='".$animal['id_animal']."'>".$animal['nom_animal']." - Origine : ". $animal["pays_origine"]." - Race : ".$animal['nom_race']."</option>";
 }
 
 

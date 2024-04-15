@@ -11,8 +11,8 @@ class Taxe {
     public function getId(): ?int { return $this->id; }
     public function setId(?int $id): Taxe { $this->id = $id; return $this;}
 
-    public function getTaux_tva(): ?string { return $this->taux_tva;}
-    public function setTaux_tva(?string $taux_tva): Taxe { $this->taux_tva = $taux_tva; return $this;}
+    public function getTaux_tva(): ?int { return $this->taux_tva;}
+    public function setTaux_tva(?int $taux_tva): Taxe { $this->taux_tva = $taux_tva; return $this;}
 
     public function getDate_debut(): ?string { return $this->date_debut; }
     public function setDate_debut(?string $date_debut): Taxe { $this->date_debut = $date_debut; return $this;}
@@ -25,4 +25,15 @@ class Taxe {
 
     //METHODS
 
+    public function getTauxTaxe():int|string{
+        try{
+            $req = $this->getBdd()->prepare("SELECT taxe.id_taxe, taxe.taux_tva FROM taxe");
+            $req->execute();
+            $data = $req->fetch(PDO::FETCH_ASSOC);
+            $taux = $data["taux_tva"];
+            return $taux;
+        }catch(Exception $error){
+            return $error->getMessage();
+        }
+    }
 }

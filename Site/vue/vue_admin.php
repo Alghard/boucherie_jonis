@@ -1,7 +1,7 @@
 <nav></nav>
 <section>
     <h1>Cest ici que tu vas ajouter/modifier/supprimer tes articles pd</h1>
-    <h2>Taux de TVA actuel : <?php echo $tva ?></h2>
+    <h2>Taux de TVA actuel : <?php echo $tva ?> %</h2>
     <ul></ul>
     <div class="add-element">
         <form action="admin.php" method="post">
@@ -80,6 +80,6 @@
     </div>
     <div class="liste-article">
         <h3>Liste articles</h3>
-        <?php echo $listAnimal?>
+        <?php echo $liste_article?>
     </div>
 </section>

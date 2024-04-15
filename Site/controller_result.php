@@ -5,8 +5,8 @@ session_start();
 if(isset($_POST['submit'])){
     if(isset($_POST["search"]) && !empty($_POST["search"])){
         $search = sanitize($_POST['search']);
-        $bdd = connect();
-        $article = searchArticle($bdd,$search);
+        $articles = new Article();
+        $result = $articles->setBdd(connect())->searchArticle($search);
     }     
 }
 // $result = "";
