@@ -72,7 +72,22 @@
                 <select name="animal" id="">
                     <?php echo $optionAnimal ?>
                 </select>
+                <input type="number" name="qty" placeholder="Quantité">
+                <br>
+                <?php foreach ($checkbox_options as $option) {
+                    echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
+                ?>
+                <input type="submit" name="submitArticle" value="Ajouter">
             </fieldset>
+        </form>
+
+        <form action="admin.php" method="post">
+            <input type="number" name="id-article" placeholder="ID article">
+            <br>
+            <?php foreach ($checkbox_options as $option) {
+                echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
+            ?>
+            <input type="submit" name="add-poids" value="Ajouter">
         </form>
 
 

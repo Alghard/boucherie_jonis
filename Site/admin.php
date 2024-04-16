@@ -6,6 +6,7 @@ include './model/model_origine.php';
 include './model/model_race.php';
 include './model/model_type.php';
 include './model/model_taxe.php';
+include './model/model_poids.php';
 session_start();
 $messageRace = '';
 $messageOrigine = '';
@@ -13,6 +14,9 @@ $messageAnimal = '';
 $messageType = '';
 $liste_article = '';
 $listAnimal = '';
+$checkbox_options =[];
+$poids = new Poids();
+$checkbox_options = $poids->setBdd(connect())->getPoids();
 $taxe = new Taxe();
 $tva = $taxe->setBdd(connect())->getTauxTaxe();
 
@@ -89,7 +93,11 @@ if(isset($_POST["submitAnimal"])){
 
 //Ajout article
 
-
+if(isset($_POST["submitArticle"])){
+    if(isset($_POST["name-article"]) && isset($_POST['description-article']) && isset($_POST['prix-unit']) && isset($_POST['prix-kg']) && isset($_POST['animal']) && isset($_POST['qty'])){
+        
+    }
+}
 
 //AFFICHAGE
 $task = new Animal();
