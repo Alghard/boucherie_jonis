@@ -86,7 +86,7 @@ function dec(element) {
 
 
 //SCRIPT CAROUSEL
-const buttons = document.querySelectorAll(".c1");
+const buttons = document.querySelectorAll(".btn");
 const slides = document.querySelectorAll(".slide");
 console.log(buttons);
 console.log(slides);

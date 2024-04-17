@@ -37,7 +37,7 @@
                 <a href="https://www.facebook.com/profile.php?id=100088735015486" target="_blank"
                     ><img src="icons/facebook.svg" alt="facebook-boucherie-jonis"
                 /></a>
-                <a href="www.instagram.com" target="_blank"><img src="icons/instagram.svg" alt="instagram-boucherie-jonis" /></a>
+                <a href="https://www.instagram.com/maison_jonis/?utm_source=qr&igsh=dXk3Y2Y4cm1kdmF0" target="_blank"><img src="icons/instagram.svg" alt="instagram-boucherie-jonis" /></a>
             </div>
             <div id="paiement">
                 <img src="icons/mastercard.png" alt="mastercard" id="mc" /><img src="icons/visa.png" alt="visa" id="vi" /><img
