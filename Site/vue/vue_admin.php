@@ -1,4 +1,10 @@
-<nav></nav>
+<nav><ul>
+    <li><a href="admin-article.php">Articles</a></li>
+    <li><a href="admin-animal.php">Animaux</a></li>
+    <li><a href="admin-race.php">Races</a></li>
+    <li><a href="admin-origine.php">Origine</a></li>
+    <li><a href="admin-poids.php">Poids</a></li>
+</ul></nav>
 <section>
     <h1>Cest ici que tu vas ajouter/modifier/supprimer tes articles pd</h1>
     <h2>Taux de TVA actuel : <?php echo $tva ?> %</h2>

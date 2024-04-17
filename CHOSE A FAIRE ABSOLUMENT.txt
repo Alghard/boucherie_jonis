@@ -19,3 +19,5 @@ FONCTION RUPTURE DE STOCK
 
 j'ai découvert la charge de travail pour creer une bdd propre
 logiciel gestion facture et marge
+
+check si formule existe poids carcasse => poids par article

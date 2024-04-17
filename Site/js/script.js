@@ -83,3 +83,27 @@ function dec(element) {
         el.value = parseInt(el.value) - 1;
     }
 }
+
+
+//SCRIPT CAROUSEL
+const buttons = document.querySelectorAll(".c1");
+const slides = document.querySelectorAll(".slide");
+console.log(buttons);
+console.log(slides);
+
+//Tableau image : [0 , 1 , 2]
+
+buttons.forEach((button) => {
+    button.addEventListener('click', (e)=>{
+        const calcNextSlide = e.target.id === "next" ? 1 : -1;
+        const slideActive = document.querySelector(".active");
+
+        newIndex = calcNextSlide + ([...slides].indexOf(slideActive));
+
+        if(newIndex < 0) newIndex = [...slides].length-1;
+        if(newIndex >= [...slides].length) newIndex = 0; 
+
+        slides[newIndex].classList.add('active');
+        slideActive.classList.remove('active');
+    });
+})
