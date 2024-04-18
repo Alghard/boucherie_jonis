@@ -374,8 +374,8 @@ body {
             position: relative;
             align-self: center;
             margin: 4vh 0px 1vh 0px;
-            border: solid 5px #231f20;
-            background-color:#ae3a33;
+            background-color:#e9e5e2;
+            
             .btn{
                 position: absolute;
                 background: none;
@@ -411,9 +411,11 @@ body {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-                max-width: 100%;
-                height: 100%;
+                border-radius: 1.5dvh;
+                width: 100%;
+                max-height: 100%;
                 object-fit: cover;
+                filter: drop-shadow(0 0 1.25rem black)
             }
         }
         #dots{
