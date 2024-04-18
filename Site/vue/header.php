@@ -53,7 +53,7 @@
                 <div id="search-bar">
                     <form action="controller_result.php" method="post" autocomplete="off">
                         <input id="search" type="text" placeholder="Rechercher..." onKeyUp="showResults(this.value)" name="search" />
-                        <button type="submit" name="submit"><img src="icons/loupe.svg" width="30px" height="30px" alt="" /></button>
+                        <button type="submit" name="submit"><img src="icons/loupe.svg" alt="" id="ico-loupe" /></button>
                     </form>
                 </div>
             </div>

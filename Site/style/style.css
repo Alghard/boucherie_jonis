@@ -114,8 +114,8 @@ body header section {
   align-items: flex-start;
   justify-self: end;
   gap: 5px;
-  margin-top: 0.5dvh;
-  margin-right: 0.5dvh;
+  margin-top: 1dvh;
+  margin-right: 1dvh;
 }
 body header section div {
   display: flex;
@@ -142,7 +142,7 @@ body header section div a img {
 body header #container-logo-header {
   grid-column: 2;
   width: auto;
-  height: 18dvh;
+  height: 22dvh;
 }
 body header #container-logo-header a {
   text-align: center;
@@ -286,8 +286,8 @@ body main #contain-search-bar #search-bar form input {
   background-color: #e9e5e2;
   border-radius: 1dvh;
   border: #c7c7c7 solid 0.2dvh;
-  height: 3vh;
-  width: 30vh;
+  height: 4vh;
+  width: 25vw;
   font-weight: bold;
   outline: none;
   font-weight: bold;
@@ -301,6 +301,10 @@ body main #contain-search-bar #search-bar form button {
   align-self: center;
   cursor: pointer;
 }
+body main #contain-search-bar #search-bar form button img {
+  width: 30px;
+  height: 30px;
+}
 body main #contain-search-bar #search-bar.original {
   margin-top: 2vh;
 }
@@ -309,8 +313,8 @@ body main #contain-search-bar #search-bar.original form input {
   background-color: #e9e5e2;
   border-radius: 1dvh;
   border: #c7c7c7 solid 0.2dvh;
-  height: 3vh;
-  width: 30vh;
+  height: 4vh;
+  width: 25vw;
   font-weight: bold;
   outline: none;
 }
@@ -325,19 +329,19 @@ body main #contain-search-bar #search-bar.fixed form input {
   background-color: #e9e5e2;
   border-radius: 1dvh;
   border: #c7c7c7 solid 0.2dvh;
-  height: 3vh;
-  width: 30vh;
+  height: 4vh;
+  width: 25vw;
   font-weight: bold;
   outline: none;
 }
 body main .caroussel {
-  height: 50vh;
-  width: 85vw;
+  height: 70vh;
+  width: 90vw;
   position: relative;
   align-self: center;
-  margin: 4vh 0px 4vh 0px;
-  height: 60vh;
-  border: solid 5px #ae3a33;
+  margin: 4vh 0px 1vh 0px;
+  border: solid 5px #231f20;
+  background-color: #ae3a33;
 }
 body main .caroussel .btn {
   position: absolute;
@@ -372,12 +376,27 @@ body main .caroussel .slide.active {
 }
 body main .caroussel .slide img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
   height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+body main #dots .dot-carou {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+body main #dots .dot-carou.active {
+  background-color: #717171;
+}
 body main #gotoshopbtn {
+  margin: 2vh;
   text-align: center;
 }
 body main #gotoshopbtn a {

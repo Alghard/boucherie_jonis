@@ -90,6 +90,14 @@ const buttons = document.querySelectorAll(".btn");
 const slides = document.querySelectorAll(".slide");
 console.log(buttons);
 console.log(slides);
+// Store the total number of images
+const dotsCarou = document.querySelectorAll(".dot-carou");
+const dotsCount = dotsCarou.length;
+console.log(dotsCount);
+const slideCount = slides.length;
+let activeSlide = 0;
+let activeDot = 0;
+let intervalId; //Pour stocker l'id de l'intervalle
 
 //Tableau image : [0 , 1 , 2]
 
@@ -106,4 +114,34 @@ buttons.forEach((button) => {
         slides[newIndex].classList.add('active');
         slideActive.classList.remove('active');
     });
+})
+
+
+// To change the images dynamically every 
+// 5 Secs, use SetInterval() method
+function changeSlide() {
+    slides[activeSlide].classList.remove('active');
+    dotsCarou[activeDot].classList.remove('active');
+    activeDot++;
+    activeSlide++;
+    if (activeSlide === slideCount) {
+        activeSlide = 0;
+        activeDot = 0;
+    }
+    dotsCarou[activeDot].classList.add('active');
+    slides[activeSlide].classList.add('active');
+};
+
+//Démarrer l'intervalle et stock son ID
+intervalId = setInterval(changeSlide, 3000);
+
+//Au survol de la souris, stoppe l'intervalle
+const caroussel = document.querySelector(".caroussel");
+caroussel.addEventListener('mouseenter', () => {
+    clearInterval(intervalId);
+});
+
+//Rédemarre l'intervalle lorsque la souris sort de la div
+caroussel.addEventListener("mouseleave", () => {
+    intervalId = setInterval(changeSlide,3000);
 })
