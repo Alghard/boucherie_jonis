@@ -88,13 +88,15 @@ function dec(element) {
 //SCRIPT CAROUSEL
 const buttons = document.querySelectorAll(".btn");
 const slides = document.querySelectorAll(".slide");
+const dotsCarou = document.querySelectorAll(".dot-carou");
 console.log(buttons);
 console.log(slides);
+console.log(dotsCarou);
 // Store the total number of images
-const dotsCarou = document.querySelectorAll(".dot-carou");
 const dotsCount = dotsCarou.length;
-console.log(dotsCount);
 const slideCount = slides.length;
+console.log(dotsCount);
+console.log(slideCount);
 let activeSlide = 0;
 let activeDot = 0;
 let intervalId; //Pour stocker l'id de l'intervalle
@@ -105,6 +107,7 @@ buttons.forEach((button) => {
     button.addEventListener('click', (e)=>{
         const calcNextSlide = e.target.id === "next" ? 1 : -1;
         const slideActive = document.querySelector(".active");
+        const dotActive = document.querySelector(".dot-carou.active");
 
         newIndex = calcNextSlide + ([...slides].indexOf(slideActive));
 
@@ -112,7 +115,9 @@ buttons.forEach((button) => {
         if(newIndex >= [...slides].length) newIndex = 0; 
 
         slides[newIndex].classList.add('active');
+        dotsCarou[newIndex].classList.add('active');
         slideActive.classList.remove('active');
+        dotActive.classList.remove('active');
     });
 })
 
