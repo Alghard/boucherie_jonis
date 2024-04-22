@@ -4,11 +4,11 @@ class Article {
 
     private ?int $id;
     private ?string $nom_article;
-    private ?int $prix_unit_article;
-    private ?int $prix_kg_article;
+    private ?float $prix_unit_article;
+    private ?float $prix_kg_article;
     private ?string $description_article;
     private ?bool $stock_article;
-    private ?int $quantite_article;
+    private ?float $quantite_article;
     private ?int $temps_conservation;
 
     private ?Type $type;
@@ -24,11 +24,11 @@ class Article {
     public function getNom_article(): ?string { return $this->nom_article; }
     public function setNom_article(?string $nom_article): Article { $this->nom_article = $nom_article; return $this;}
 
-    public function getPrixUnit(): ?int {return $this->prix_unit_article;}
-    public function setPrixUnit(?int $prix_unit): Article { $this->prix_unit_article = $prix_unit; return $this;}
+    public function getPrixUnit(): ?float {return $this->prix_unit_article;}
+    public function setPrixUnit(?float $prix_unit): Article { $this->prix_unit_article = $prix_unit; return $this;}
 
-    public function getPrixKg(): ?int {return $this->prix_kg_article;}
-    public function setPrixKg(?int $prix_kg): Article { $this->prix_kg_article = $prix_kg; return $this;}
+    public function getPrixKg(): ?float {return $this->prix_kg_article;}
+    public function setPrixKg(?float $prix_kg): Article { $this->prix_kg_article = $prix_kg; return $this;}
 
     public function getDescription(): ?string { return $this->description_article; }
     public function setDescription(?string $description): Article { $this->description_article = $description; return $this; }
@@ -36,8 +36,8 @@ class Article {
     public function getStock(): ?bool { return $this->stock_article; }
     public function setStock(?bool $stock): Article { $this->stock_article = $stock; return $this; }
 
-    public function getQuantite(): ?int{return$this->quantite_article;}
-    public function setQuantite(?int $qty): Article {$this->quantite_article = $qty; return $this; }
+    public function getQuantite(): ?float{return$this->quantite_article;}
+    public function setQuantite(?float $qty): Article {$this->quantite_article = $qty; return $this; }
 
     public function getDLC(): ?int { return $this->temps_conservation; }
     public function setDLC(?int $temps_conservation): Article { $this->temps_conservation = $temps_conservation; return $this;}
@@ -92,7 +92,7 @@ class Article {
 
     function addArticle():string{
         try{
-            $req = $this->getBdd()->prepare("INSERT INTO article (nom_article, description_article, prix_unit_article, prix_kg_article, id_animal, quantite_article) VALUES (?,?,?,?,?,?");
+            $req = $this->getBdd()->prepare("INSERT INTO article (nom_article, description_article, prix_unit_article, prix_kg_article, id_animal, quantite) VALUES (?,?,?,?,?,?)");
             $name = $this->getNom_article();
             $prix_unit = $this->getPrixUnit();
             $prix_kg = $this->getPrixKg();
@@ -101,10 +101,10 @@ class Article {
             $qty = $this->getQuantite();
             $req->bindParam(1,$name,PDO::PARAM_STR);
             $req->bindParam(2,$description,PDO::PARAM_STR);
-            $req->bindParam(3,$prix_unit,PDO::PARAM_INT);
-            $req->bindParam(4,$prix_kg,PDO::PARAM_INT);
+            $req->bindParam(3,$prix_unit,PDO::PARAM_STR); //obligé d'utiliser param str pour des nb decimaux
+            $req->bindParam(4,$prix_kg,PDO::PARAM_STR);
             $req->bindParam(5,$idAnimal,PDO::PARAM_INT);
-            $req->bindParam(6,$qty,PDO::PARAM_INT);
+            $req->bindParam(6,$qty,PDO::PARAM_STR);
             $req->execute();
             return "Article $name ajouté avec succés !";
         }catch(Exception $error){

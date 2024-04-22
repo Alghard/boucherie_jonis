@@ -73,19 +73,21 @@
                 <legend>Ajout article</legend>
                 <input type="text" name="name-article" id="" placeholder="Nom article">
                 <input type="text" name="description-article" id="" placeholder="Description article">
-                <input type="number" name="prix-unit" id="" placeholder="Prix unitaire">
-                <input type="number" name="prix-kg" placeholder="Prix au kg">
+                <input type="text" name="prix-unit" id="" step="0.01" placeholder="Prix unitaire">
+                <input type="text" name="prix-kg" step="0.01" placeholder="Prix au kg">
                 <select name="animal" id="">
                     <?php echo $optionAnimal ?>
                 </select>
-                <input type="number" name="qty" placeholder="Quantité">
+                <input type="text" name="qty" placeholder="Quantité">
                 <br>
-                <?php foreach ($checkbox_options as $option) {
-                    echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
+                <?php //foreach ($checkbox_options as $option) {
+                    //echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
                 ?>
                 <input type="submit" name="submitArticle" value="Ajouter">
             </fieldset>
         </form>
+
+        <p><?php echo $messageArticle ?></p>
 
         <form action="admin.php" method="post">
             <input type="number" name="id-article" placeholder="ID article">

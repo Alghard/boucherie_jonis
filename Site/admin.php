@@ -12,6 +12,7 @@ $messageRace = '';
 $messageOrigine = '';
 $messageAnimal = '';
 $messageType = '';
+$messageArticle = '';
 $liste_article = '';
 $listAnimal = '';
 $checkbox_options =[];
@@ -95,7 +96,23 @@ if(isset($_POST["submitAnimal"])){
 
 if(isset($_POST["submitArticle"])){
     if(isset($_POST["name-article"]) && isset($_POST['description-article']) && isset($_POST['prix-unit']) && isset($_POST['prix-kg']) && isset($_POST['animal']) && isset($_POST['qty'])){
-        
+        $name = sanitize($_POST['name-article']);
+        $desc = sanitize($_POST['description-article']);
+        $punit = floatval(sanitize($_POST['prix-unit']));
+        $pkg = floatval(sanitize($_POST['prix-kg']));
+        $idAnimal = sanitize($_POST['animal']);
+        $qty = floatval(sanitize($_POST['qty']));
+        $animal = new Animal();
+        $animal->setBdd(connect())->setId($idAnimal);
+        $article = new Article();
+        if(filter_var($punit,FILTER_VALIDATE_FLOAT) && filter_var($pkg,FILTER_VALIDATE_FLOAT) && filter_var($idAnimal,FILTER_VALIDATE_INT) && filter_var($qty,FILTER_VALIDATE_FLOAT)){
+            $article->setBdd(connect())->setNom_article($name)->setDescription($desc)->setPrixUnit($punit)->setPrixKg($pkg)->setAnimal($animal)->setQuantite($qty);
+            $messageArticle = $article->addArticle();
+        }else{
+            $messageArticle = "Les données ne sont pas  au bon format !";
+        }
+    }else{
+        $messageArticle = "Veuillez remplir le formulaire correctement";
     }
 }
 
