@@ -6,13 +6,13 @@
     <button class="btn c1" id="next">&#10097;</button>
     <ul>
         <li class="slide 1">
-            <img src="img/img_1.jpg" alt="image carousel">
+            <img src="img/img_1.jpg" alt="image carousel" width="1920" height="675">
         </li>
         <li class="slide 1 active">
-            <img src="img/img_2.jpg" alt="image carousel">
+            <img src="img/img_2.jpg" alt="image carousel" width="1920" height="675">
         </li>
         <li class="slide 1">
-            <img src="img/img_3.jpg" alt="image carousel">
+            <img src="img/img_3.jpg" alt="image carousel" width="1920" height="675">
         </li>
     </ul>
 </div>

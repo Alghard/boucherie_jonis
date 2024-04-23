@@ -1,16 +1,18 @@
-<nav><ul>
-    <li><a href="admin-article.php">Articles</a></li>
-    <li><a href="admin-animal.php">Animaux</a></li>
-    <li><a href="admin-race.php">Races</a></li>
-    <li><a href="admin-origine.php">Origine</a></li>
-    <li><a href="admin-poids.php">Poids</a></li>
-</ul></nav>
+<nav>
+    <ul>
+        <li><a href="admin-article.php">Articles</a></li>
+        <li><a href="admin-animal.php">Animaux</a></li>
+        <li><a href="admin-race.php">Races</a></li>
+        <li><a href="admin-origine.php">Origine</a></li>
+        <li><a href="admin-poids.php">Poids</a></li>
+    </ul>
+</nav>
 <section>
-    <h1>Cest ici que tu vas ajouter/modifier/supprimer tes articles pd</h1>
+    <h1>Cest ici que tu vas ajouter/modifier/supprimer tes articles</h1>
     <h2>Taux de TVA actuel : <?php echo $tva ?> %</h2>
     <ul></ul>
     <div class="add-element">
-        <form action="admin.php" method="post">
+        <form class="form-add" action="admin.php" method="post">
             <fieldset>
                 <legend>Ajout Race</legend>
                 <input type="text" name="add-race" placeholder="Nom race">
@@ -23,7 +25,7 @@
         <span>----------------------------------</span>
 
 
-        <form action="admin.php" method="post">
+        <form class="form-add" action="admin.php" method="post">
             <fieldset>
                 <legend>Ajout pays d'origine</legend>
                 <input type="text" name="add-origine" placeholder="Nom origine">
@@ -35,7 +37,7 @@
 
         <span>----------------------------------</span>
 
-        <form action="admin.php" method="post">
+        <form class="form-add" action="admin.php" method="post">
             <fieldset>
                 <legend>Ajout type d'article</legend>
                 <input type="text" name="add-type" placeholder="Nom type d'article">
@@ -47,7 +49,7 @@
 
         <span>----------------------------------</span>
 
-        <form action="admin.php" method="post">
+        <form class="form-add" action="admin.php" method="post">
             <fieldset>
                 <legend>Ajout animal</legend>
                 <input type="text" name="add-animal" placeholder="Nom animal">
@@ -68,7 +70,7 @@
 
         <span>----------------------------------</span>
 
-        <form action="admin.php" method="post">
+        <form class="form-add" action="admin.php" method="post">
             <fieldset>
                 <legend>Ajout article</legend>
                 <input type="text" name="name-article" id="" placeholder="Nom article">
@@ -79,7 +81,6 @@
                     <?php echo $optionAnimal ?>
                 </select>
                 <input type="text" name="qty" placeholder="Quantité">
-                <br>
                 <?php //foreach ($checkbox_options as $option) {
                     //echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
                 ?>
@@ -89,7 +90,7 @@
 
         <p><?php echo $messageArticle ?></p>
 
-        <form action="admin.php" method="post">
+        <form class="form-add" action="admin.php" method="post">
             <input type="number" name="id-article" placeholder="ID article">
             <br>
             <?php foreach ($checkbox_options as $option) {
