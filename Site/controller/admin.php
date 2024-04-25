@@ -116,6 +116,9 @@ if(isset($_POST["submitArticle"])){
     }
 }
 
+//Ajout poids test
+if(isset($_POST["add-poids"]))
+
 //AFFICHAGE
 $task = new Animal();
 $task->setBdd(connect());

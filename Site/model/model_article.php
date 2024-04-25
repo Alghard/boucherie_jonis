@@ -89,7 +89,7 @@ class Article {
         $ttc= $price*$this->getTaxe()->getTaux_tva()/100;
         return $ttc;
     }
-
+    
     function addArticle():string{
         try{
             $req = $this->getBdd()->prepare("INSERT INTO article (nom_article, description_article, prix_unit_article, prix_kg_article, id_animal, quantite) VALUES (?,?,?,?,?,?)");

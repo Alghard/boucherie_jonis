@@ -1,13 +1,6 @@
-<nav>
-    <ul>
-        <li><a href="admin-article.php">Articles</a></li>
-        <li><a href="admin-animal.php">Animaux</a></li>
-        <li><a href="admin-race.php">Races</a></li>
-        <li><a href="admin-origine.php">Origine</a></li>
-        <li><a href="admin-poids.php">Poids</a></li>
-    </ul>
-</nav>
-<section>
+<link rel="stylesheet" href="../public/style/admin.css">
+
+<section id="admin-panel">
     <h1>Cest ici que tu vas ajouter/modifier/supprimer tes articles</h1>
     <h2>Taux de TVA actuel : <?php echo $tva ?> %</h2>
     <ul></ul>
@@ -80,7 +73,7 @@
                 <select name="animal" id="">
                     <?php echo $optionAnimal ?>
                 </select>
-                <input type="text" name="qty" placeholder="Quantité">
+                <input type="text" name="qty" placeholder="Quantité en gr">
                 <?php //foreach ($checkbox_options as $option) {
                     //echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
                 ?>
@@ -107,3 +100,4 @@
         <?php echo $liste_article?>
     </div>
 </section>
+<section id="admin-commands"></section>
