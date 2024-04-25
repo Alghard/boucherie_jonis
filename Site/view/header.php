@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Boucherie Jonis</title>
-        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="../public/style/style.css" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
     </head>
     <body>
@@ -22,7 +22,7 @@
                 </button>
             </div>
             <div id="container-logo-header">
-                <a href="index.php"><img src="logo/logo_jonis.png" alt="logo" class="logo" id="logo-header" /></a>
+                <a href="index.php"><img src="../public/logo/logo_jonis.png" alt="logo" class="logo" id="logo-header" /></a>
             </div>
             <div id="navbar">
                 <ul>
@@ -38,11 +38,11 @@
             </div>
             <section>
                 <div>
-                    <a href="panier.html" class="header-icons"><img src="icons/panier.svg" alt="basket" /></a>
+                    <a href="panier.html" class="header-icons"><img src="../public/icons/panier.svg" alt="basket" /></a>
                     <a href="panier.html" class="header-txt">Mon Panier</a>
                 </div>
                 <div>
-                    <a href="profil.html" class="header-icons"><img src="icons/utilisateur.svg" alt="user"/></a>
+                    <a href="profil.html" class="header-icons"><img src="../public/icons/utilisateur.svg" alt="user"/></a>
                     <a href="profil.html" class="header-txt">Mon Compte</a>
                 </div>
             </section>
@@ -53,7 +53,7 @@
                 <div id="search-bar">
                     <form action="controller_result.php" method="post" autocomplete="off">
                         <input id="search" type="text" placeholder="Rechercher..." onKeyUp="showResults(this.value)" name="search" />
-                        <button type="submit" name="submit"><img src="icons/loupe.svg" alt="" id="ico-loupe" /></button>
+                        <button type="submit" name="submit"><img src="../public/icons/loupe.svg" alt="" id="ico-loupe" /></button>
                     </form>
                 </div>
             </div>

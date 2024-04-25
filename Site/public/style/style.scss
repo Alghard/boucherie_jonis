@@ -413,7 +413,8 @@ body {
                 margin-left: auto;
                 margin-right: auto;
                 border-radius: 1.5dvh;
-                background-size: contain;
+                background-size: cover;
+                background-position: center;
                 height: 100%;
                 object-fit: cover;
                 filter: drop-shadow(0 0 1.25rem black)
@@ -657,8 +658,10 @@ body {
 }
 @media only screen and (max-width: 535px){
     body{
-        footer{
-            // height: 90dvh;
+        main{
+            .caroussel{
+                
+            }
         }
     }
 }

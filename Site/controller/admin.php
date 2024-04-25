@@ -1,12 +1,12 @@
 <?php
-include 'utils.php';
-include './model/model_article.php';
-include './model/model_animal.php';
-include './model/model_origine.php';
-include './model/model_race.php';
-include './model/model_type.php';
-include './model/model_taxe.php';
-include './model/model_poids.php';
+include '../utils/utils.php';
+include '../model/model_article.php';
+include '../model/model_animal.php';
+include '../model/model_origine.php';
+include '../model/model_race.php';
+include '../model/model_type.php';
+include '../model/model_taxe.php';
+include '../model/model_poids.php';
 session_start();
 $messageRace = '';
 $messageOrigine = '';
@@ -158,4 +158,4 @@ foreach ($dataAnimals as $animal){
 }
 
 
-include './vue/vue_admin.php';
+include '../view/vue_admin.php';

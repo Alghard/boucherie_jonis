@@ -6,13 +6,13 @@
     <button class="btn c1" id="next">&#10097;</button>
     <ul>
         <li class="slide 1">
-            <img src="img/img_1.jpg" alt="image carousel" width="1920" height="675">
+            <img src="../public/img/img_1.jpg" alt="image carousel" width="1920" height="675">
         </li>
         <li class="slide 1 active">
-            <img src="img/img_2.jpg" alt="image carousel" width="1920" height="675">
+            <img src="../public/img/img_2.jpg" alt="image carousel" width="1920" height="675">
         </li>
         <li class="slide 1">
-            <img src="img/img_3.jpg" alt="image carousel" width="1920" height="675">
+            <img src="../public/img/img_3.jpg" alt="image carousel" width="1920" height="675">
         </li>
     </ul>
 </div>
@@ -45,7 +45,7 @@
 <div id="contain-arrowup">
     <div id="arrow-up">
         <a href="#">
-            <img src="icons/arrow_up.svg" alt="" />
+            <img src="../public/icons/arrow_up.svg" alt="" />
         </a>
     </div>
 </div>

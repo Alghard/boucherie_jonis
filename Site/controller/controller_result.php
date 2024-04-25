@@ -1,6 +1,6 @@
 <?php
-include 'utils.php';
-include './model/model_article.php';
+include '../utils/utils.php';
+include '../model/model_article.php';
 session_start();
 if(isset($_POST['submit'])){
     if(isset($_POST["search"]) && !empty($_POST["search"])){
@@ -16,6 +16,6 @@ if(isset($_POST['submit'])){
 //     $result = "No results SRY";
 // }
 
-include "./vue/header.php";
-include './vue/view_result.php';
-include './vue/footer.php';
+include "../view/header.php";
+include '../view/view_result.php';
+include '../view/footer.php';
