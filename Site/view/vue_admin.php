@@ -1,5 +1,12 @@
-<link rel="stylesheet" href="../public/style/admin.css">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style/admin.css">
+    <title>Document</title>
+</head>
+<body>
 <section id="admin-panel">
     <h1>Cest ici que tu vas ajouter/modifier/supprimer tes articles</h1>
     <h2>Taux de TVA actuel : <?php echo $tva ?> %</h2>
@@ -83,21 +90,33 @@
 
         <p><?php echo $messageArticle ?></p>
 
-        <form class="form-add" action="admin.php" method="post">
-            <input type="number" name="id-article" placeholder="ID article">
-            <br>
-            <?php foreach ($checkbox_options as $option) {
-                echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
-            ?>
-            <input type="submit" name="add-poids" value="Ajouter">
-        </form>
-
-
-
     </div>
     <div class="liste-article">
         <h3>Liste articles</h3>
         <?php echo $liste_article?>
     </div>
 </section>
-<section id="admin-commands"></section>
+<section id="admin-commands">
+    <form action="admin.php" class="modify-article">
+        <fieldset>
+            <legend>Modifier article</legend>
+            <input type="text" name="name-article" id="" placeholder="Nom article">
+            <input type="text" name="description-article" id="" placeholder="Description article">
+            <input type="text" name="prix-unit" id="" step="0.01" placeholder="Prix unitaire">
+            <input type="text" name="prix-kg" step="0.01" placeholder="Prix au kg">
+            <select name="animal" id="">
+                <?php echo $optionAnimal ?>
+            </select>
+            <input type="text" name="qty" placeholder="Quantité en gr">
+            <?php //foreach ($checkbox_options as $option) {
+                //echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
+            ?>
+            <input type="submit" name="modifyArticle" value="Ajouter">
+        </fieldset>
+    </form>
+</section>
+
+<script src="../public/js/admin.js"></script>
+</body>
+</html>
+

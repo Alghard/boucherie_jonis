@@ -6,13 +6,28 @@
     <button class="btn c1" id="next">&#10097;</button>
     <ul>
         <li class="slide 1">
-            <img src="../public/img/img_1.jpg" alt="image carousel" width="1920" height="675">
+            <a href="admin.php">
+                <div class="text-caroussel">
+                    <p>SUPER  PROMO DE  LESPACE WOLzeifiznfA</p>
+                </div>
+                <img src="../public/img/img_1.jpg" alt="image carousel" width="1920" height="675">
+            </a>
         </li>
         <li class="slide 1 active">
-            <img src="../public/img/img_2.jpg" alt="image carousel" width="1920" height="675">
+            <a href="admin.php">
+                <div class="text-caroussel">
+                    <p>SUPER MEGA OMEGA PROMO DE  LESPACE WOLA</p>
+                </div>
+                <img src="../public/img/img_2.jpg" alt="image carousel" width="1920" height="675">
+            </a>
         </li>
         <li class="slide 1">
-            <img src="../public/img/img_3.jpg" alt="image carousel" width="1920" height="675">
+            <a href="admin.php">
+                <div class="text-caroussel">
+                    <p>SUPER  PROMO DE  LESPACE WOLA ET INFINITY</p>
+                </div>
+                <img src="../public/img/img_3.jpg" alt="image carousel" width="1920" height="675">
+            </a>
         </li>
     </ul>
 </div>

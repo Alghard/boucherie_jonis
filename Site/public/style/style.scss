@@ -376,7 +376,6 @@ body {
             align-self: center;
             margin: 4vh 0px 1vh 0px;
             background-color:#e9e5e2;
-            
             .btn{
                 position: absolute;
                 background: none;
@@ -397,6 +396,15 @@ body {
             }
             li{
                 list-style: none;
+                a{
+                    .text-caroussel{
+                        position: absolute;
+                        z-index: 15;
+                        left: 25%;
+                        bottom: 25%;
+                        @include link;
+                    }
+                }
             }
             .slide{
                 position: absolute;
@@ -416,6 +424,7 @@ body {
                 background-size: cover;
                 background-position: center;
                 height: 100%;
+                max-width: 100%;
                 object-fit: cover;
                 filter: drop-shadow(0 0 1.25rem black)
             }

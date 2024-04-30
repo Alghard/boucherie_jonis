@@ -1,12 +1,13 @@
 <?php
+
 include '../utils/utils.php';
-include '../model/model_article.php';
 include '../model/model_animal.php';
+include '../model/model_article.php';
 include '../model/model_origine.php';
-include '../model/model_race.php';
-include '../model/model_type.php';
-include '../model/model_taxe.php';
 include '../model/model_poids.php';
+include '../model/model_taxe.php';
+include '../model/model_race.php';
+
 session_start();
 $messageRace = '';
 $messageOrigine = '';
@@ -117,7 +118,6 @@ if(isset($_POST["submitArticle"])){
 }
 
 //Ajout poids test
-if(isset($_POST["add-poids"]))
 
 //AFFICHAGE
 $task = new Animal();
@@ -131,7 +131,7 @@ $try = new Article();
 $try->setBdd(connect());
 $dataArticles = $try->getAllArticles();
 foreach($dataArticles as $article){
-    $liste_article = $liste_article."<li><h3>".$article['id_article']." : ".$article['nom_article']."</h3><p>Prix unit : ".$article['prix_unit_article']."€</p><p>Prix au kg : ".$article['prix_kg_article']."€</p><p>Stock ? : ".$article['stock_article']."</li>";
+    $liste_article = $liste_article."<li><h3>".$article['id_article']." : ".$article['nom_article']."</h3><button class='btn-modify' id=".$article['id_article'].">Modifier</button><button id=".$article['id_article'].">Supprimer</button></li>";
 }
 
 

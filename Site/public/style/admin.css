@@ -17,6 +17,10 @@ body{
     width: 50%;
 }
 
+.modify-article{
+    display: none;
+}
+
 .form-add{
     margin: 5px;
     padding: 5px;

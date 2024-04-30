@@ -364,6 +364,25 @@ body main .caroussel #next {
 body main .caroussel li {
   list-style: none;
 }
+body main .caroussel li a .text-caroussel {
+  position: absolute;
+  z-index: 15;
+  left: 25%;
+  bottom: 25%;
+  cursor: pointer;
+  font-weight: bold;
+  color: #e9e5e2;
+  background-color: #ae3a33;
+  text-decoration: none;
+  border-radius: 1.5vh;
+  border: #ae3a33 solid 2px;
+  padding: 1vh 3vh 1vh 3vh;
+}
+body main .caroussel li a .text-caroussel:hover {
+  color: #ae3a33;
+  background-color: #e9e5e2;
+  text-decoration: underline;
+}
 body main .caroussel .slide {
   position: absolute;
   height: 100%;
@@ -382,6 +401,7 @@ body main .caroussel .slide img {
   background-size: cover;
   background-position: center;
   height: 100%;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   filter: drop-shadow(0 0 1.25rem black);
