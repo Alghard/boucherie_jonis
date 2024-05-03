@@ -72,7 +72,41 @@ class Article {
             die($error->getMessage());
         }
     }
+
+    function updateArticle(int $id):string{
+        try{
+            $req = $this->getBdd()->prepare("UPDATE article SET nom_article = ?, description_article = ?, prix_unit_article = ?, prix_kg_article = ?, quantite = ? WHERE article.id_article = ?");
+            $name = $this->getNom_article();
+            $prix_unit = $this->getPrixUnit();
+            $prix_kg = $this->getPrixKg();
+            $description = $this->getDescription();
+            $qty = $this->getQuantite();
+            $req->bindParam(1,$name,PDO::PARAM_STR);
+            $req->bindParam(2,$description,PDO::PARAM_STR);
+            $req->bindParam(3,$prix_unit,PDO::PARAM_STR);
+            $req->bindParam(4,$prix_kg,PDO::PARAM_STR);
+            $req->bindParam(5,$qty,PDO::PARAM_STR);
+            $req->bindParam(6,$id,PDO::PARAM_INT);
+            $req->execute();
+            return "Modification de l'article effectué";
+        }
+        catch(Exception $error){
+            die($error->getMessage());
+        }
+    }
     
+    function getArticleById(int $id):array{
+        try{
+            $req = $this->getBdd()->prepare("SELECT id_article, nom_article, prix_unit_article, prix_kg_article, description_article, quantite, temps_conservation FROM article WHERE article.id_article = ?");
+            $req->bindParam(1,$id,PDO::PARAM_INT);
+            $req -> execute();
+            $list = $req->fetch(PDO::FETCH_ASSOC);
+            return $list;
+        }
+        catch(Exception $error){
+            die($error->getMessage());
+        }
+    }
     function getAllArticles():array|string{
         try{
             $req = $this->getBdd()->prepare("SELECT article.id_article, article.nom_article, article.prix_unit_article, article.prix_kg_article, article.stock_article FROM article");

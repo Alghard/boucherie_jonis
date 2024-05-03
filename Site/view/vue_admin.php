@@ -96,24 +96,8 @@
         <?php echo $liste_article?>
     </div>
 </section>
-<section id="admin-commands">
-    <form action="admin.php" class="modify-article">
-        <fieldset>
-            <legend>Modifier article</legend>
-            <input type="text" name="name-article" id="" placeholder="Nom article">
-            <input type="text" name="description-article" id="" placeholder="Description article">
-            <input type="text" name="prix-unit" id="" step="0.01" placeholder="Prix unitaire">
-            <input type="text" name="prix-kg" step="0.01" placeholder="Prix au kg">
-            <select name="animal" id="">
-                <?php echo $optionAnimal ?>
-            </select>
-            <input type="text" name="qty" placeholder="Quantité en gr">
-            <?php //foreach ($checkbox_options as $option) {
-                //echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
-            ?>
-            <input type="submit" name="modifyArticle" value="Ajouter">
-        </fieldset>
-    </form>
+<section class="admin-commands">
+    <p><?php echo $msgArticleModif ?></p>
 </section>
 
 <script src="../public/js/admin.js"></script>

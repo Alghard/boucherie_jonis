@@ -17,8 +17,13 @@ body{
     width: 50%;
 }
 
+.container-modify{
+    display: block;
+}
+
 .modify-article{
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-add{

@@ -21,6 +21,8 @@ $poids = new Poids();
 $checkbox_options = $poids->setBdd(connect())->getPoids();
 $taxe = new Taxe();
 $tva = $taxe->setBdd(connect())->getTauxTaxe();
+$msgArticleModif = '';
+// Vérifier s'il y a un message de succès à afficher
 
 //Ajout d'une race
 if(isset($_POST['submitRace'])){
@@ -105,12 +107,12 @@ if(isset($_POST["submitArticle"])){
         $qty = floatval(sanitize($_POST['qty']));
         $animal = new Animal();
         $animal->setBdd(connect())->setId($idAnimal);
-        $article = new Article();
+        $new_article = new Article();
         if(filter_var($punit,FILTER_VALIDATE_FLOAT) && filter_var($pkg,FILTER_VALIDATE_FLOAT) && filter_var($idAnimal,FILTER_VALIDATE_INT) && filter_var($qty,FILTER_VALIDATE_FLOAT)){
-            $article->setBdd(connect())->setNom_article($name)->setDescription($desc)->setPrixUnit($punit)->setPrixKg($pkg)->setAnimal($animal)->setQuantite($qty);
-            $messageArticle = $article->addArticle();
+            $new_article->setBdd(connect())->setNom_article($name)->setDescription($desc)->setPrixUnit($punit)->setPrixKg($pkg)->setAnimal($animal)->setQuantite($qty);
+            $messageArticle = $new_article->addArticle();
         }else{
-            $messageArticle = "Les données ne sont pas  au bon format !";
+            $messageArticle = "Les données ne sont pas au bon format !";
         }
     }else{
         $messageArticle = "Veuillez remplir le formulaire correctement";
@@ -131,7 +133,7 @@ $try = new Article();
 $try->setBdd(connect());
 $dataArticles = $try->getAllArticles();
 foreach($dataArticles as $article){
-    $liste_article = $liste_article."<li><h3>".$article['id_article']." : ".$article['nom_article']."</h3><button class='btn-modify' id=".$article['id_article'].">Modifier</button><button id=".$article['id_article'].">Supprimer</button></li>";
+    $liste_article = $liste_article."<li><h3>".$article['id_article']." : ".$article['nom_article']."</h3><a href='modifier_article.php?id={$article['id_article']}' class='btn-modify'>Modifier</a></li>";
 }
 
 
@@ -159,6 +161,13 @@ $dataAnimals = $animals->getAnimals();
 foreach ($dataAnimals as $animal){
     $optionAnimal = $optionAnimal."<option value='".$animal['id_animal']."'>".$animal['nom_animal']." - Origine : ". $animal["pays_origine"]." - Race : ".$animal['nom_race']."</option>";
 }
+
+
+//Fenetre modifier
+
+
+
+
 
 
 include '../view/vue_admin.php';
