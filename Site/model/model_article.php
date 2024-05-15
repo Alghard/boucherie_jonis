@@ -118,6 +118,18 @@ class Article {
             die($error->getMessage());
         }
     }
+
+    function getBestSeller():array|string{
+        try{
+            $req =$this->getBdd()->prepare("SELECT article.nom_article, article.prix_unit_article, article.prix_kg_article, animal.nom_animal, images.url_image, origine.pays_origine, race.nom_race, images.alt_image FROM article JOIN animal ON article.id_animal = animal.id_animal JOIN race ON animal.id_race = race.id_race JOIN origine ON animal.id_origine = origine.id_origine JOIN images ON article.id_article = images.id_article WHERE article.id_article = 6 OR article.id_article = 8 OR article.id_article = 10 OR article.id_article = 11 OR article.id_article = 12");
+            $req->execute();
+            $list = $req->fetchAll(PDO::FETCH_ASSOC);
+            return $list;
+        }
+        catch(Exception $error){
+            die($error->getMessage());
+        }
+    }
     
     function applyTaxes(int $price):int{
         $ttc= $price*$this->getTaxe()->getTaux_tva()/100;

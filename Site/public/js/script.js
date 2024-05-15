@@ -47,11 +47,11 @@ widthMatch.addEventListener("change", function (mm) {
     //Je place un event listener sur mon MQ qui réagit au changement de taille
     if (mm.matches) {
         //Si la largeur max de mon ecran est inférieure ou égale a mon MQ je met cette src
-        logoFooter.src = "logo/logo_jonis_mini.png";
-        logoHeader.src = "logo/logo_jonis_mini.png";
+        logoFooter.src = "../public/logo/logo_jonis_mini.png";
+        logoHeader.src = "../public/logo/logo_jonis_mini.png";
     } else {
-        logoFooter.src = "logo/logo_jonis.png"; //Sinon je mets l'autre src
-        logoHeader.src = "logo/logo_jonis.png";
+        logoFooter.src = "../public/logo/logo_jonis.png"; //Sinon je mets l'autre src
+        logoHeader.src = "../public/logo/logo_jonis.png";
     }
 });
 let widthWindow = window.innerWidth;
