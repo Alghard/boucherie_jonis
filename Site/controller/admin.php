@@ -7,6 +7,7 @@ include '../model/model_origine.php';
 include '../model/model_poids.php';
 include '../model/model_taxe.php';
 include '../model/model_race.php';
+include '../model/model_type.php';
 
 session_start();
 $messageRace = '';
@@ -98,18 +99,21 @@ if(isset($_POST["submitAnimal"])){
 //Ajout article
 
 if(isset($_POST["submitArticle"])){
-    if(isset($_POST["name-article"]) && isset($_POST['description-article']) && isset($_POST['prix-unit']) && isset($_POST['prix-kg']) && isset($_POST['animal']) && isset($_POST['qty'])){
+    if(isset($_POST["name-article"]) && isset($_POST['description-article']) && isset($_POST['prix-unit']) && isset($_POST['prix-kg']) && isset($_POST['animal']) && isset($_POST['type']) && isset($_POST['qty'])){
         $name = sanitize($_POST['name-article']);
         $desc = sanitize($_POST['description-article']);
         $punit = floatval(sanitize($_POST['prix-unit']));
         $pkg = floatval(sanitize($_POST['prix-kg']));
         $idAnimal = sanitize($_POST['animal']);
+        $idType = sanitize($_POST['type']);
         $qty = floatval(sanitize($_POST['qty']));
         $animal = new Animal();
         $animal->setBdd(connect())->setId($idAnimal);
+        $type = new Type();
+        $type->setBdd(connect())->setId($idType);
         $new_article = new Article();
         if(filter_var($punit,FILTER_VALIDATE_FLOAT) && filter_var($pkg,FILTER_VALIDATE_FLOAT) && filter_var($idAnimal,FILTER_VALIDATE_INT) && filter_var($qty,FILTER_VALIDATE_FLOAT)){
-            $new_article->setBdd(connect())->setNom_article($name)->setDescription($desc)->setPrixUnit($punit)->setPrixKg($pkg)->setAnimal($animal)->setQuantite($qty);
+            $new_article->setBdd(connect())->setNom_article($name)->setDescription($desc)->setPrixUnit($punit)->setPrixKg($pkg)->setAnimal($animal)->setType($type)->setQuantite($qty);
             $messageArticle = $new_article->addArticle();
         }else{
             $messageArticle = "Les données ne sont pas au bon format !";
@@ -129,14 +133,28 @@ foreach($dataTask as $task){
     $listAnimal = $listAnimal."<li><h3>".$task['nom_animal']."</h3><p>Origine : ".$task['pays_origine']."</p><p>Race : ".$task['nom_race']."</p><p>Catégorie : ".$task['id_animal']."</p></li>";
 }
 
+
 $try = new Article();
 $try->setBdd(connect());
 $dataArticles = $try->getAllArticles();
 foreach($dataArticles as $article){
-    $liste_article = $liste_article."<li><h3>".$article['id_article']." : ".$article['nom_article']."</h3><a href='modifier_article.php?id={$article['id_article']}' class='btn-modify'>Modifier</a></li>";
+    $liste_article = $liste_article."<li><h3>".$article['id_article']." : ".$article['nom_article']."</h3><a href='modifier_article.php?id={$article['id_article']}' class='btn-modify'>Modifier</a><form action='admin.php' method='post' style='display:inline;'><input type='hidden' name='id' value='{$article['id_article']}'><button type='submit' name='deletebtn' class='btn-delete'>SUPPRIMER</button></form></li>";
+}
+if(isset($_POST["deletebtn"])){
+    $id = $_POST["id"];
+    $objet = new Article;
+    $objet->setBdd(connect());
+    $objet->deleteArticle($id);
 }
 
-
+//Recup et  affichage des types d'article
+$optionType = '';
+$typeArticle = new Type();
+$typeArticle->setBdd(connect());
+$dataType = $typeArticle->getTypes();
+foreach ($dataType as $type){
+    $optionType = $optionType."<option value='".$type['id_type']."'>".$type['nom_type']."</option>";
+}
 //Récupération et affichage des origines et races dans mes select
 $optionOri = '';
 $origine = new Origine();

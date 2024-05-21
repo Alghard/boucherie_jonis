@@ -199,7 +199,7 @@ body main section #result .article {
   width: 300px;
   height: 500px;
   border: #c7c7c7 solid 2px;
-  padding: 3px;
+  padding: 5px;
   margin: 1dvh;
   justify-content: space-between;
 }
@@ -209,14 +209,21 @@ body main section #result .article .entete {
   justify-content: center;
   height: 45%;
 }
-body main section #result .article .entete img {
+body main section #result .article .entete a {
   align-self: center;
-  width: 90%;
+  font-weight: bold;
+  color: #231f20;
+  text-decoration: none;
+}
+body main section #result .article .entete a img {
+  width: 100%;
   height: auto;
 }
-body main section #result .article .entete .nom-article {
+body main section #result .article .entete a:hover {
+  color: #ae3a33;
+}
+body main section #result .article .entete a .nom-article {
   height: 35px;
-  align-self: center;
   font-size: 1.3rem;
   text-align: center;
 }
@@ -227,6 +234,7 @@ body main section #result .article .entete .viande {
 body main section #result .article .prix {
   display: flex;
   justify-content: space-between;
+  height: 25%;
 }
 body main section #result .article .prix .prix-unit {
   padding-left: 0.5dvh;
@@ -293,7 +301,7 @@ body main #best-seller #result .article {
   width: 300px;
   height: 500px;
   border: #c7c7c7 solid 2px;
-  padding: 3px;
+  padding: 5px;
   margin: 1dvh;
   justify-content: space-between;
 }
@@ -303,14 +311,21 @@ body main #best-seller #result .article .entete {
   justify-content: center;
   height: 45%;
 }
-body main #best-seller #result .article .entete img {
+body main #best-seller #result .article .entete a {
   align-self: center;
-  width: 90%;
+  font-weight: bold;
+  color: #231f20;
+  text-decoration: none;
+}
+body main #best-seller #result .article .entete a img {
+  width: 100%;
   height: auto;
 }
-body main #best-seller #result .article .entete .nom-article {
+body main #best-seller #result .article .entete a:hover {
+  color: #ae3a33;
+}
+body main #best-seller #result .article .entete a .nom-article {
   height: 35px;
-  align-self: center;
   font-size: 1.3rem;
   text-align: center;
 }
@@ -321,6 +336,7 @@ body main #best-seller #result .article .entete .viande {
 body main #best-seller #result .article .prix {
   display: flex;
   justify-content: space-between;
+  height: 25%;
 }
 body main #best-seller #result .article .prix .prix-unit {
   padding-left: 0.5dvh;

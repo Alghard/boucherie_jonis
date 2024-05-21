@@ -24,7 +24,7 @@
             width: 300px;
             height: 500px;
             border: #c7c7c7 solid 2px;
-            padding: 3px;
+            padding: 5px;
             margin: 1dvh;
             justify-content:space-between;
             .entete{
@@ -32,16 +32,23 @@
                 flex-direction: column;
                 justify-content: center;
                 height: 45%;
-                img{
+                a{
                     align-self: center;
-                    width: 90%;
-                    height: auto;
-                }
-                .nom-article{
-                    height: 35px;
-                    align-self: center;
-                    font-size: 1.3rem;
-                    text-align: center;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                    font-weight: bold;
+                    color: #231f20;
+                    text-decoration: none;
+                    &:hover{
+                        color: #ae3a33;
+                    }
+                    .nom-article{
+                        height: 35px;
+                        font-size: 1.3rem;
+                        text-align: center;
+                    }
                 }
                 .viande{
                     width: 100%;
@@ -51,6 +58,7 @@
             .prix{
                 display: flex;
                 justify-content: space-between;
+                height: 25%;
                 .prix-unit{
                     padding-left: 0.5dvh;
                     align-self: baseline;

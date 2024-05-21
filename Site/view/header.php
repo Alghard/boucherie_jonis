@@ -27,7 +27,7 @@
             <div id="navbar">
                 <ul>
                     <li><a href="boutique.html" id="bp">NOS BONS PLANS</a></li>
-                    <li><a href="boutique.html">BOUCHERIE</a></li>
+                    <li><a href="controller_result.php?id=3">BOUCHERIE</a></li>
                     <li><a href="boutique.html">CHARCUTERIE</a></li>
                     <li><a href="boutique.html">TRAITEUR</a></li>
                     <li><a href="recette.html">RECETTES</a></li>

@@ -118,6 +118,19 @@ class Article {
             die($error->getMessage());
         }
     }
+    
+    function getArticlesByCategory(int $id):array{
+        try {
+            $req = $this->getBdd()->prepare("SELECT article.nom_article, article.prix_unit_article, article.prix_kg_article, animal.nom_animal, images.url_image, origine.pays_origine, race.nom_race, images.alt_image FROM article JOIN animal ON article.id_animal = animal.id_animal JOIN race ON animal.id_race = race.id_race JOIN origine ON animal.id_origine = origine.id_origine JOIN images ON article.id_article = images.id_article WHERE article.id_type = ?");
+            $req->bindParam(1,$id,PDO::PARAM_INT);
+            $req -> execute();
+            $list = $req->fetchAll(PDO::FETCH_ASSOC);
+            return $list;
+        }
+        catch(Exception $error){
+            die($error->getMessage());
+        }
+    }
 
     function getBestSeller():array|string{
         try{
@@ -139,21 +152,34 @@ class Article {
     
     function addArticle():string{
         try{
-            $req = $this->getBdd()->prepare("INSERT INTO article (nom_article, description_article, prix_unit_article, prix_kg_article, id_animal, quantite) VALUES (?,?,?,?,?,?)");
+            $req = $this->getBdd()->prepare("INSERT INTO article (nom_article, description_article, prix_unit_article, prix_kg_article, id_animal, id_type, quantite) VALUES (?,?,?,?,?,?,?)");
             $name = $this->getNom_article();
             $prix_unit = $this->getPrixUnit();
             $prix_kg = $this->getPrixKg();
             $description = $this->getDescription();
             $idAnimal = $this->getAnimal()->getId();
+            $idType = $this->getType()->getId();
             $qty = $this->getQuantite();
             $req->bindParam(1,$name,PDO::PARAM_STR);
             $req->bindParam(2,$description,PDO::PARAM_STR);
             $req->bindParam(3,$prix_unit,PDO::PARAM_STR); //obligé d'utiliser param str pour des nb decimaux
             $req->bindParam(4,$prix_kg,PDO::PARAM_STR);
             $req->bindParam(5,$idAnimal,PDO::PARAM_INT);
-            $req->bindParam(6,$qty,PDO::PARAM_STR);
+            $req->bindParam(6,$idType,PDO::PARAM_INT);
+            $req->bindParam(7,$qty,PDO::PARAM_STR);
             $req->execute();
             return "Article $name ajouté avec succés !";
+        }catch(Exception $error){
+            return $error->getMessage();
+        }
+    }
+
+    function deleteArticle(int $id):string{
+        try{
+            $req = $this->getBdd()->prepare("DELETE FROM article WHERE article.id_article = ?");
+            $req->bindParam(1,$id,PDO::PARAM_INT);
+            $req->execute();
+            return "Article supprimé !";
         }catch(Exception $error){
             return $error->getMessage();
         }

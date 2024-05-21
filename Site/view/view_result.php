@@ -7,8 +7,8 @@
             <?php foreach ($result as $item): ?>
                 <div class='article'>
                     <div class='entete'>
-                        <img src='<?php echo $item['url_image']?>'/>
-                        <h3 class='nom-article'><?php echo $item['nom_article']?></h3>
+                    <a href='modifier_article.php?id=<?php $item['id_article']?>'><img src='<?php echo $item['url_image']?>'></a>
+                    <a href='modifier_article.php?id=<?php $item['id_article']?>'><h3 class='nom-article'><?php echo $item['nom_article']?></h3></a>
                         <p class='viande'><?php echo $item['nom_animal']?> Origine <?php echo $item['pays_origine'] ?></p>
                     </div>
                     <div class='prix'>

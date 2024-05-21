@@ -8,7 +8,15 @@ if(isset($_POST['submit'])){
         $articles = new Article();
         $result = $articles->setBdd(connect())->searchArticle($search);
     }     
-}
+}else if (isset($_GET['id'])) {
+        $articleID = $_GET['id'];
+        $article = new Article();
+        $article->setBdd(connect());
+        $result = $article->getArticlesByCategory($articleID);
+    }
+
+
+
 // $result = "";
 // if($article != null){
 //     $result = displayResult($article);

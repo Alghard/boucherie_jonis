@@ -80,6 +80,9 @@
                 <select name="animal" id="">
                     <?php echo $optionAnimal ?>
                 </select>
+                <select name="type" id="">
+                    <?php echo $optionType ?>
+                </select>
                 <input type="text" name="qty" placeholder="Quantité en gr">
                 <?php //foreach ($checkbox_options as $option) {
                     //echo '<input type="checkbox" name="check_list[]" value="'.$option['id_poids'].'">'.$option['valeur_poids'].' gr<br>';}
