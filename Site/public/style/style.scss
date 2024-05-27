@@ -17,6 +17,7 @@
         display: flex;
         flex-wrap: wrap;
         font-family:'Open Sans';
+        justify-content: center;
         .article{
             display: flex;
             flex-direction: column;
@@ -404,7 +405,7 @@ body {
                 border: none;
                 outline: none;
                 font-size: 2.6rem;
-                z-index: 2;
+                z-index: 20;
                 cursor: pointer;
                 color: #231f20;
                 transform: translateY(-50%);
@@ -424,20 +425,27 @@ body {
                     width: 100%;
                     justify-content: flex-end;
                     .text-caroussel{
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
                         position: absolute;
                         text-align: center;
                         z-index: 15;
                         align-self: flex-end;
                         background: none;
                         color: #e9e5e2;
-                        height: 65%;
-                        width: 40%;
+                        padding-right: 10%;
+                        top: 25%;
+                        left: 65%;
                         h3{
                             font-size: 3.5rem;
                         }
                         .text-promo{
+                            position: relative;
                             font-size: 2rem;
-                            margin: 1%
+                            margin: 1%;
+                            padding-left: 25%;
+                            padding-right: 25%
                         }
                         .link-promo{
                             @include link;
@@ -707,11 +715,39 @@ body {
         }
     }
 }
-@media only screen and (max-width: 535px){
+@media only screen and (max-width: 480px){
     body{
         main{
+            #contain-search-bar{
+                #search-bar{
+                    form{
+                        #search{
+                            width: 42vw;
+                        }
+                    }
+                }
+            }
             .caroussel{
-                
+                ul{
+                    .slide{
+                        width: auto;
+                        a{
+                            .text-caroussel{
+                                left:40%;
+                                h3{
+                                    font-size: 2rem;
+                                }
+                                .text-promo{
+                                    font-size: 1.1rem;
+                                }
+                                .link-promo{
+                                    width: auto;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

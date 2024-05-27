@@ -8,31 +8,31 @@
         <li class="slide 1">
             <a href="">
                 <div class="text-caroussel">
-                    <h3>Bg de titre promo</h3>
+                    <h3>Gros titre</h3>
                     <p class="text-promo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, ratione!</p>
                     <p class="link-promo">Je découvre</p>
                 </div>
-                <img src="../public/img/img_1.jpg" alt="image carousel" width="1920" height="675">
+                <img src="../public/img/img_1.jpg" alt="Vue intérieure de la boucherie Jonis" width="1920" height="675">
             </a>
         </li>
         <li class="slide 1 active">
             <a href="">
                 <div class="text-caroussel">
-                    <h3>Promo titre de bg</h3>
+                    <h3>Gros titre</h3>
                     <p class="text-promo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, blanditiis!</p>
                     <p class="link-promo">Je découvre</p>
                 </div>
-                <img src="../public/img/img_2.jpg" alt="image carousel" width="1920" height="675">
+                <img src="../public/img/img_2.jpg" alt="Affichage du tableau promotion de la semaine" width="1920" height="675">
             </a>
         </li>
         <li class="slide 1">
             <a href="">
                 <div class="text-caroussel">
-                    <h3>Titre promo de bg</h3>
+                    <h3>Gros titre</h3>
                     <p class="text-promo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, reprehenderit.</p>
                     <p class="link-promo">Je découvre</p>
                 </div>
-                <img src="../public/img/img_3.jpg" alt="image carousel" width="1920" height="675">
+                <img src="../public/img/img_3.jpg" alt="Vue sur la chambre de maturation avec saucisses et viandes maturées " width="1920" height="675">
             </a>
         </li>
     </ul>

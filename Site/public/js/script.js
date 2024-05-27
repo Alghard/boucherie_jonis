@@ -85,18 +85,12 @@ function dec(element) {
 }
 
 
-//SCRIPT CAROUSEL
+//SCRIPT CARROUSEL
 const buttons = document.querySelectorAll(".btn");
 const slides = document.querySelectorAll(".slide");
 const dotsCarou = document.querySelectorAll(".dot-carou");
-console.log(buttons);
-console.log(slides);
-console.log(dotsCarou);
-// Store the total number of images
 const dotsCount = dotsCarou.length;
 const slideCount = slides.length;
-console.log(dotsCount);
-console.log(slideCount);
 let activeSlide = 0;
 let activeDot = 0;
 let intervalId; //Pour stocker l'id de l'intervalle
@@ -121,9 +115,6 @@ buttons.forEach((button) => {
     });
 })
 
-
-// To change the images dynamically every 
-// 5 Secs, use SetInterval() method
 function changeSlide() {
     slides[activeSlide].classList.remove('active');
     dotsCarou[activeDot].classList.remove('active');
