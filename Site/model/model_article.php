@@ -95,7 +95,7 @@ class Article {
         }
     }
     
-    function getArticleById(int $id):array{
+    function getArticleById(int $id):array|string{
         try{
             $req = $this->getBdd()->prepare("SELECT id_article, nom_article, prix_unit_article, prix_kg_article, description_article, quantite, temps_conservation FROM article WHERE article.id_article = ?");
             $req->bindParam(1,$id,PDO::PARAM_INT);
